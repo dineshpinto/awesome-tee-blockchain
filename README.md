@@ -161,10 +161,12 @@ Key characteristics of TEEs:
 
 ## Videos
 
-- [Private Smart Contracts are Worth the Price of the SGX - Andrew Miller](https://www.youtube.com/watch?v=L0bp6V1pn0s)
+- [TEE for Blockchain Applications - Ari Juels](https://youtu.be/Xq7oWtiwWII)
+- [Parallelized Confidential Computing - Yannik Schrade](https://youtu.be/k0Uxl71Lj_g)
+- [Trusted Execution Environments Meet the Blockchain - Ittay Eyal](https://youtu.be/J-8RdvvpUzM)
+- [Private Smart Contracts are Worth the Price of the SGX - Andrew Miller](https://youtu.be/L0bp6V1pn0s)
 - [SGX Panel: Andrew Miller, Jonathan Passerat Palmbach, Phil Daian, Justin Drake](https://youtu.be/vokDXJmPCSI)
 - [Enabling Cross Chain Transfers Using SGX](https://youtu.be/f2bU55ngO_c)
-- [TEE for Blockchain Applications - Ari Juels](https://youtu.be/Xq7oWtiwWII?feature=shared)
-- [Protected Order Flow - Flashbots](https://www.youtube.com/watch?v=v1TkocRScJg)
+- [Protected Order Flow for Fair Transaction-Ordering in a Profit-Seeking World - Kushal Babel MEV-SBC 23](https://youtu.be/v1TkocRScJg)
 - [Blockchains + TEEs: Day 1](https://youtu.be/9-nhNQO5_Js)
 - [Blockchains + TEEs: Day 2](https://youtu.be/zIU3gFTb2PM)
