@@ -24,9 +24,9 @@ Key characteristics of TEEs:
 2. [Hardware](#hardware)
    - [Google Cloud Confidential Compute](#google-cloud-confidential-compute)
    - [Amazon Nitro](#amazon-nitro)
-   - [AMD SEV](#amd-sev)
-   - [Intel SGX](#intel-sgx)
-   - [ARM](#arm-trustzone)
+   - [AMD Secure Encrypted Virtualization (SEV)](#amd-sev)
+   - [Intel Software Guard Extensions (SGX)](#intel-sgx)
+   - [ARM TrustZone](#arm-trustzone)
 3. [Use Cases](#use-cases)
    - [Block Building](#block-building)
    - [General Compute](#general-compute)
@@ -134,7 +134,7 @@ Key characteristics of TEEs:
 - [deislabs/mystikos](https://github.com/deislabs/mystikos) - Tools and runtime for launching unmodified container images in Trusted Execution Environments
 - [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [mofanv/PPFL](https://github.com/mofanv/PPFL) - Privacy-preserving Federated Learning with Trusted Execution Environments
-- [inclavare-containers/inclavare-containers](https://github.com/inclavare-containers/inclavare-containers) - A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem.
+- [](https://github.com/inclavare-containers/inclavare-containers) - A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem.
 
 ### Python
 
