@@ -21,32 +21,35 @@ Key characteristics of TEEs:
 ## Table of Contents
 
 1. [Comparison](#comparison)
-2. [Hardware](#hardware)
+2. [Cloud Providers](#cloud-providers)
    - [Google Cloud Confidential Compute](#google-cloud-confidential-compute)
-   - [Amazon Nitro](#amazon-nitro)
-   - [AMD Secure Encrypted Virtualization (SEV)](#amd-sev)
-   - [Intel Software Guard Extensions (SGX)](#intel-sgx)
-   - [ARM TrustZone](#arm-trustzone)
-3. [Use Cases](#use-cases)
+   - [Microsoft Azure Confidential Computing](#microsoft-azure-confidential-computing)
+   - [Amazon AWS Nitro](#amazon-aws-nitro)
+3. [Hardware](#hardware)
+   - [AMD](#amd)
+   - [Intel](#intel)
+   - [ARM](#arm)
+   - [NVIDIA](#nvidia)
+4. [Use Cases](#use-cases)
    - [Block Building](#block-building)
    - [General Compute](#general-compute)
    - [Privacy](#privacy)
-4. [Repositories](#repositories)
+5. [Repositories](#repositories)
    - [Rust](#rust)
    - [Go](#go)
    - [C++](#cpp)
    - [C](#c)
    - [Python](#python)
-5. [Research Papers](#research-papers)
-6. [Articles](#articles)
-7. [Videos](#videos)
+6. [Research Papers](#research-papers)
+7. [Articles](#articles)
+8. [Videos](#videos)
 
 ## Comparison
 
 - [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
 - [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
 
-## Hardware
+## Cloud Providers
 
 ### Google Cloud Confidential Compute
 
@@ -55,21 +58,37 @@ Key characteristics of TEEs:
 - [Confidential Space](https://cloud.google.com/docs/security/confidential-space)
 - [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation)
 
-### Amazon Nitro
+### Microsoft Azure Confidential Computing
+
+- [Azure Confidential VM](https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-vm-overview)
+
+### Amazon AWS Nitro
 
 - [Nitro](https://aws.amazon.com/ec2/nitro/)
+- [Nitro Enclaves](https://aws.amazon.com/ec2/nitro/nitro-enclaves/)
 
-### AMD SEV
+## Hardware
 
-- [SEV](https://www.amd.com/en/developer/sev.html)
+### AMD
 
-### Intel SGX
+- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html)
+- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf)
+- [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf)
 
-- [SGX](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html)
+### Intel
 
-### ARM TrustZone
+- [Advanced Matrix Extensions (AMX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html)
+- [Trust Domain Extensions (TDX)](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html?wapkw=TDX)
+- [Software Guard Extensions (SGX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html)
 
+### ARM
+
+- [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture)
 - [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.)
+
+### NVIDIA
+
+- [H100 TensorCore GPU](https://www.nvidia.com/en-us/data-center/h100/?ncid=so-link-915436-vt04#cid=hpc09_so-link_en-us)
 
 ## Use Cases
 
