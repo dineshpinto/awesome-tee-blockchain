@@ -34,6 +34,7 @@ Key characteristics of TEEs:
    - [Block Building](#block-building)
    - [General Compute](#general-compute)
    - [Privacy](#privacy)
+   - [Bridging](#bridging)
 5. [Repositories](#repositories)
    - [Rust](#rust)
    - [Go](#go)
