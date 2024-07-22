@@ -98,7 +98,7 @@ Key characteristics of TEEs:
 - [Block Building inside SGX](https://writings.flashbots.net/block-building-inside-sgx)
 - [Running Geth within SGX: Our Experience, Learnings and Code](https://writings.flashbots.net/geth-inside-sgx)
 - [SGX-Based Backrunning and Covert Channels](https://writings.flashbots.net/backrunning-private-txs-MPC#sgx-based-backrunning-and-covert-channels)
-- [MEV-SGX -- A sealed bid MEV auction design](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
+- [MEV-SGX - A sealed bid MEV auction design](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
 
 ### General Compute
 
@@ -124,7 +124,7 @@ Key characteristics of TEEs:
 - [kinvolk/azure-cvm-tooling](https://github.com/kinvolk/azure-cvm-tooling) - Libraries and tools for Confidential Computing on Azure
 - [HyperEnclave/hyperenclave](https://github.com/HyperEnclave/hyperenclave) - An Open and Cross-platform Trusted Execution Environment.
 - [mobilecoinfoundation/mobilecoin](https://github.com/mobilecoinfoundation/mobilecoin) - Private payments for mobile devices
-- [integritee-network/worker](https://github.com/integritee-network/worker) - ntegritee off-chain worker and sidechain validateer
+- [integritee-network/worker](https://github.com/integritee-network/worker) - Integritee off-chain worker and sidechain validateer
 - [capsule-corp-ternoa/ternoa-node](https://github.com/capsule-corp-ternoa/ternoa-node) - Ternoa's Node Implementation
 - [automata-network/automata](https://github.com/automata-network/automata) - Automata Network is a modular attestation layer that extends machine trust to Ethereum with TEE Coprocessors.
 - [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) - The Phala Network Blockchain, pRuntime and the bridge.
@@ -153,7 +153,7 @@ Key characteristics of TEEs:
 - [deislabs/mystikos](https://github.com/deislabs/mystikos) - Tools and runtime for launching unmodified container images in Trusted Execution Environments
 - [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [mofanv/PPFL](https://github.com/mofanv/PPFL) - Privacy-preserving Federated Learning with Trusted Execution Environments
-- [](https://github.com/inclavare-containers/inclavare-containers) - A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem.
+- [inclavare-containers/inclavare-containers](https://github.com/inclavare-containers/inclavare-containers) - A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem.
 
 ### Python
 
