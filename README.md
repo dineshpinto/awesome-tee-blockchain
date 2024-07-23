@@ -110,7 +110,6 @@ Key characteristics of TEEs:
 - [Marlin Protocol](https://github.com/marlinprotocol)
 - [Phala Network](https://github.com/Phala-Network)
 - [Automata Network](https://www.ata.network)
-- [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
 
 ### Privacy
 
@@ -179,22 +178,26 @@ Key characteristics of TEEs:
 
 ## Research Papers
 
-- A. Sunny, N, Shrivastava, S. R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
+- A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
 - H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
-- X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
-- Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
-- A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
-- R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
-- C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
+- X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
+- Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
+- A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
+- R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, "SoK: TEE-assisted Confidential Smart Contract", 2022 - [arXiv](https://arxiv.org/abs/2203.08548)
+- R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
+- C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, and X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
 - D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, “CHEX-MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two-party Oblivious Inference in the Cloud”, 2021. - [Cryptology ePrint Archive](https://eprint.iacr.org/2021/1603)
-- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
+- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, and B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
 - A. Nilsson, P. N. Bideh, and J. Brorsson, “A Survey of Published Attacks on Intel SGX”, 2020. - [arXiv](http://arxiv.org/abs/2006.13598)
 - K. Murdock, D. Oswald, F. D. Garcia, J. Van Bulck, D. Gruss, and F. Piessens, “Plundervolt: Software-based Fault Injection Attacks against Intel SGX”, 2020. - [IEEE](https://ieeexplore.ieee.org/document/9152636)
+- R. Cheng, F. Zhang, J. Kos, W. He, N. Hynes, N. Johnson, A. Juels, and A. Miller, "Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contracts", 2019 - [IEEE](https://ieeexplore.ieee.org/document/8806762)
+- G. Kaptchuk, I. Miers, and M. Green, "Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers" , 2017 - [Cryptology ePrint Archive](https://eprint.iacr.org/2017/201)
 - J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, "Teechain: A Secure Payment Network with Asynchronous Blockchain Access", 2017. - [arXiv](https://arxiv.org/abs/1707.05454)
 
 ## Articles
 
 - [Verifiable Off-chain Compute - Florin Digital](https://florindigital.substack.com/p/verifiable-off-chain-compute-enabling)
+- [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
 - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
 - [Blockchain × TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
 - [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
