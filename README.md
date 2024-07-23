@@ -188,6 +188,7 @@ Key characteristics of TEEs:
 
 ## Videos
 
+- [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
 - [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
 - [TEE for Blockchain Applications - Ari Juels, a16z crypto 2023](https://youtu.be/Xq7oWtiwWII)
 - [Private Smart Contracts are Worth the Price of the SGX - Andrew Miller, ETHDenver 2023](https://youtu.be/L0bp6V1pn0s)
