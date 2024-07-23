@@ -28,8 +28,8 @@ Key characteristics of TEEs:
 3. [Hardware](#hardware)
    - [AMD](#amd)
    - [Intel](#intel)
-   - [ARM](#arm)
    - [NVIDIA](#nvidia)
+   - [ARM](#arm)
 4. [Use Cases](#use-cases)
    - [Block Building](#block-building)
    - [General Compute](#general-compute)
@@ -72,24 +72,26 @@ Key characteristics of TEEs:
 
 ### AMD
 
-- [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf)
-- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf)
-- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html)
+- [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf) - Improved I/O performance and security in AMD SEV-SNP guests
+- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf) - Expands on SEV, adds memory integrity protection to help prevent malicious hypervisor-based attacks
+- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html) - Hardware-based memory encryption through the AMD Secure Processor
 
 ### Intel
 
-- [Advanced Matrix Extensions (AMX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html)
-- [Trust Domain Extensions (TDX)](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html?wapkw=TDX)
-- [Software Guard Extensions (SGX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html)
-
-### ARM
-
-- [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture)
-- [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.)
+- [Advanced Matrix Extensions (AMX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html) - Accelerator to improve the performance of deep-learning training and inference on the CPU
+- [Trust Domain Extensions (TDX)](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html?wapkw=TDX) - Latest Hardware-based TEE architecture from Intel
+- [Software Guard Extensions (SGX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html) - Protects data actively being used in the processor and memory by creating a TEE
 
 ### NVIDIA
 
-- [H100 TensorCore GPU](https://www.nvidia.com/en-us/data-center/h100/?ncid=so-link-915436-vt04#cid=hpc09_so-link_en-us)
+- [H100 TensorCore GPU](https://www.nvidia.com/en-us/data-center/h100/?ncid=so-link-915436-vt04#cid=hpc09_so-link_en-us) - Hardware-based trusted execution environment with NVIDIA Hopper and NVIDIA Blackwell architecture support
+- [Hopper Architecture](https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/) - Accelerated computing platform for AI
+- [Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) - Latest HW generation with accelerated computing and generative AI optimizations
+
+### ARM
+
+- [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture) - Under development. Key component of the Armv9-A architecture
+- [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.) - Isolates critical security firmware, assets and private information for Armv8-M based devices
 
 ## Use Cases
 
