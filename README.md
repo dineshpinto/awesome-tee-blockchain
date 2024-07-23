@@ -54,9 +54,9 @@ Key characteristics of TEEs:
 
 ### Google Cloud Confidential Compute
 
-- [Confidential Compute](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms)
 - [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24)
 - [Confidential Space](https://cloud.google.com/docs/security/confidential-space)
+- [Confidential Compute](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms)
 - [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation)
 
 ### Microsoft Azure Confidential Computing
@@ -72,9 +72,9 @@ Key characteristics of TEEs:
 
 ### AMD
 
-- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html)
-- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf)
 - [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf)
+- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf)
+- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html)
 
 ### Intel
 
