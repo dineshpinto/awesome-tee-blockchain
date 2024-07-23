@@ -35,6 +35,8 @@ Key characteristics of TEEs:
    - [General Compute](#general-compute)
    - [Privacy](#privacy)
    - [Bridging](#bridging)
+   - [Digital Asset Management](#digital-asset-management)
+   - [Rollups](#rollups)
 5. [Repositories](#repositories)
    - [Rust](#rust)
    - [Go](#go)
@@ -108,6 +110,7 @@ Key characteristics of TEEs:
 - [Marlin Protocol](https://github.com/marlinprotocol)
 - [Phala Network](https://github.com/Phala-Network)
 - [Automata Network](https://www.ata.network)
+- [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
 
 ### Privacy
 
@@ -119,6 +122,14 @@ Key characteristics of TEEs:
 
 - [Avalanche Bridge: Secure Cross-Chain Asset Transfers Using Intel SGX](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1)
 
+### Digital Asset Management
+
+- [Fireblocks](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclaves) - Stores MPC key shares in an Intel SGX enclave as part of multi-layered security model
+
+### Rollups
+
+- [Taiko](https://taiko.xyz/) - Combines ZK-proofs and SGX-based proofs as part of a multi-prover ZK-rollup approach.
+
 ## Repositories
 
 ### Rust
@@ -126,6 +137,7 @@ Key characteristics of TEEs:
 - [marlinprotocol/oyster-serverless](https://github.com/marlinprotocol/oyster-serverless) - Oyster Serverless is a cutting-edge, high-performance serverless computing platform designed to securely execute JavaScript (JS) and WebAssembly (WASM) code in a highly controlled environment.
 - [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) - The Phala Network Blockchain, pRuntime and the bridge.
 - [kata-containers/kata-containers](https://github.com/kata-containers/kata-containers) - Kata Containers is an open source project and community working to build a standard implementation of lightweight Virtual Machines (VMs) that feel and perform like containers, but provide the workload isolation and security advantages of VMs.
+- [taikoxyz/raiko](https://github.com/taikoxyz/raiko) - Multi-proofs for Taiko. SNARKS, STARKS and Trusted Execution Enclave.
 - [confidential-containers/guest-components](https://github.com/confidential-containers/guest-components) - Confidential Containers Guest Tools and Components
 - [kinvolk/azure-cvm-tooling](https://github.com/kinvolk/azure-cvm-tooling) - Libraries and tools for Confidential Computing on Azure
 - [HyperEnclave/hyperenclave](https://github.com/HyperEnclave/hyperenclave) - An Open and Cross-platform Trusted Execution Environment.
@@ -135,6 +147,7 @@ Key characteristics of TEEs:
 - [automata-network/automata](https://github.com/automata-network/automata) - Automata Network is a modular attestation layer that extends machine trust to Ethereum with TEE Coprocessors.
 - [apache/incubator-teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk) - Apache Teaclave (incubating) SGX SDK helps developers to write Intel SGX applications in the Rust programming language, and also known as Rust SGX SDK.
 - [apache/incubator-teaclave](https://github.com/apache/incubator-teaclave) - Apache Teaclave (incubating) is an open source universal secure computing platform, making computation on privacy-sensitive data safe and simple.
+- [scrtlabs/incubator-teaclave-sgx-sdk](https://github.com/scrtlabs/incubator-teaclave-sgx-sdk) - Rust SGX SDK provides the ability to write Intel SGX applications in Rust Programming Language. Fork of `apache/incubator-teaclave-sgx-sdk`.
 
 ### Go
 
@@ -174,6 +187,7 @@ Key characteristics of TEEs:
 - R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
 - C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
 - D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, “CHEX-MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two-party Oblivious Inference in the Cloud”, 2021. - [Cryptology ePrint Archive](https://eprint.iacr.org/2021/1603)
+- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
 - A. Nilsson, P. N. Bideh, and J. Brorsson, “A Survey of Published Attacks on Intel SGX”, 2020. - [arXiv](http://arxiv.org/abs/2006.13598)
 - K. Murdock, D. Oswald, F. D. Garcia, J. Van Bulck, D. Gruss, and F. Piessens, “Plundervolt: Software-based Fault Injection Attacks against Intel SGX”, 2020. - [IEEE](https://ieeexplore.ieee.org/document/9152636)
 - J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, "Teechain: A Secure Payment Network with Asynchronous Blockchain Access", 2017. - [arXiv](https://arxiv.org/abs/1707.05454)
@@ -181,6 +195,8 @@ Key characteristics of TEEs:
 ## Articles
 
 - [Verifiable Off-chain Compute - Florin Digital](https://florindigital.substack.com/p/verifiable-off-chain-compute-enabling)
+- [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
+- [Blockchain × TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
 - [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
 - [TEE-based Smart Contracts and Sealing Pitfalls](https://medium.com/initc3org/tee-based-smart-contracts-and-sealing-pitfalls-eccd5d751329)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem)
