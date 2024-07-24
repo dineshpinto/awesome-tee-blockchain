@@ -1,6 +1,6 @@
 # Awesome TEE Blockchain
 
-A curated list of resources for learning about Trusted Execution Environments (TEEs) in the context of blockchains. This list includes articles, research papers, code repositories, videos, and more.
+A curated list of resources for learning about Trusted Execution Environments (TEEs) in the context of blockchains. This list includes articles, research papers, tweet threads, code repositories, videos, and more.
 
 ## What are TEEs?
 
@@ -20,37 +20,32 @@ Key characteristics of TEEs:
 
 ## Table of Contents
 
-1. [Comparison](#comparison)
-2. [Cloud Providers](#cloud-providers)
+1. [Cloud Providers](#cloud-providers)
    - [Google Cloud Confidential Compute](#google-cloud-confidential-compute)
    - [Microsoft Azure Confidential Computing](#microsoft-azure-confidential-computing)
    - [Amazon AWS Nitro](#amazon-aws-nitro)
-3. [Hardware](#hardware)
+2. [Hardware](#hardware)
    - [AMD](#amd)
    - [Intel](#intel)
    - [NVIDIA](#nvidia)
    - [ARM](#arm)
-4. [Use Cases](#use-cases)
+3. [Use Cases](#use-cases)
    - [Block Building](#block-building)
    - [Bridging](#bridging)
    - [Digital Asset Management](#digital-asset-management)
    - [General Compute](#general-compute)
    - [Privacy](#privacy)
    - [Rollups](#rollups)
-5. [Repositories](#repositories)
+4. [Repositories](#repositories)
    - [Rust](#rust)
    - [Go](#go)
    - [C++](#cpp)
    - [C](#c)
    - [Python](#python)
-6. [Research Papers](#research-papers)
-7. [Articles](#articles)
-8. [Videos](#videos)
-
-## Comparison
-
-- [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
-- [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
+5. [Research Papers](#research-papers)
+6. [Articles](#articles)
+7. [Videos](#videos)
+8. [Tweet Threads](#tweet-threads)
 
 ## Cloud Providers
 
@@ -199,6 +194,8 @@ Key characteristics of TEEs:
 
 - [Verifiable Off-chain Compute - Florin Digital](https://florindigital.substack.com/p/verifiable-off-chain-compute-enabling)
 - [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
+- [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
+- [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
 - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
 - [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
 - [Blockchain × TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
@@ -224,3 +221,7 @@ Key characteristics of TEEs:
 - [SGX Panel 2023: Andrew Miller, Jonathan Passerat Palmbach, Phil Daian, Justin Drake](https://youtu.be/vokDXJmPCSI)
 - [Enabling Cross Chain Transfers Using SGX - Michael Kaplan, Avalanche Summit 2022](https://youtu.be/f2bU55ngO_c)
 - [Trusted Execution Environments Meet the Blockchain - Ittay Eyal, Simons Institute 2019](https://youtu.be/J-8RdvvpUzM)
+
+## Tweet threads
+
+- [@buchmanster on TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
