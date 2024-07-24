@@ -32,10 +32,10 @@ Key characteristics of TEEs:
    - [ARM](#arm)
 4. [Use Cases](#use-cases)
    - [Block Building](#block-building)
-   - [General Compute](#general-compute)
-   - [Privacy](#privacy)
    - [Bridging](#bridging)
    - [Digital Asset Management](#digital-asset-management)
+   - [General Compute](#general-compute)
+   - [Privacy](#privacy)
    - [Rollups](#rollups)
 5. [Repositories](#repositories)
    - [Rust](#rust)
@@ -105,6 +105,14 @@ Key characteristics of TEEs:
 - [SGX-Based Backrunning and Covert Channels](https://writings.flashbots.net/backrunning-private-txs-MPC#sgx-based-backrunning-and-covert-channels)
 - [MEV-SGX - A sealed bid MEV auction design](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
 
+### Bridging
+
+- [Avalanche Bridge: Secure Cross-Chain Asset Transfers Using Intel SGX](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1)
+
+### Digital Asset Management
+
+- [Fireblocks](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclaves) - Stores MPC key shares in an Intel SGX enclave as part of multi-layered security model
+
 ### General Compute
 
 - Marlin Protocol - [Website](https://www.marlin.org/), [marlinprotocol GitHub](https://github.com/marlinprotocol)
@@ -116,17 +124,9 @@ Key characteristics of TEEs:
 - Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
 - Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
 
-### Bridging
-
-- [Avalanche Bridge: Secure Cross-Chain Asset Transfers Using Intel SGX](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1)
-
-### Digital Asset Management
-
-- [Fireblocks](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclaves) - Stores MPC key shares in an Intel SGX enclave as part of multi-layered security model
-
 ### Rollups
 
-- [Taiko](https://taiko.xyz/) - Combines ZK-proofs and SGX-based proofs as part of a multi-prover ZK-rollup approach.
+- Taiko - [Website](https://taiko.xyz/), [taikoxyz GitHub](https://github.com/taikoxyz)
 
 ## Repositories
 
