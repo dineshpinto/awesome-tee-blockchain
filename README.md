@@ -213,6 +213,7 @@ Key characteristics of TEEs:
 
 ## Videos
 
+- [How to Win Friends and TEE-fluence People - Ethan Buchman, Modular Summit 2024](https://www.youtube.com/watch?v=XwKIt5XYyqw)
 - [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
 - [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
 - [TEE for Blockchain Applications - Ari Juels, a16z crypto 2023](https://youtu.be/Xq7oWtiwWII)
