@@ -56,7 +56,7 @@ Key characteristics of TEEs:
 
 ### Google Cloud Confidential Compute
 
-- [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24) - Supports Intel TDX with Intel AMX, and NVIDIA H100 GPUs. 
+- [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24) - Supports Intel TDX with Intel AMX, and NVIDIA H100 GPUs.
 - [Confidential VMs](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms) - Supports AMD SEV, AMD SEV-SNP, and Intel TDX.
 - [Confidential Space](https://cloud.google.com/docs/security/confidential-space) - Supports trust model where the workload author, workload operator, and resource owners are separate, mutually distrusting parties.
 - [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation) - Attestation support for AMD SEV (vTPM), AMD SEV-SNP (vTPM and TSM), and Intel TDX (vTPM and TSM).
@@ -107,15 +107,14 @@ Key characteristics of TEEs:
 
 ### General Compute
 
-- [Marlin Protocol](https://github.com/marlinprotocol)
-- [Phala Network](https://github.com/Phala-Network)
-- [Automata Network](https://www.ata.network)
+- Marlin Protocol - [Website](https://www.marlin.org/), [marlinprotocol GitHub](https://github.com/marlinprotocol)
+- Phala Network - [Website](https://phala.network/), [Phala-Network GitHub](https://github.com/Phala-Network)
+- Automata Network - [Website](https://ata.network/), [automata-network GitHub](https://github.com/automata-network)
 
 ### Privacy
 
-- [Oasis Protocol](https://oasisprotocol.org)
-- [Secret Network](https://scrt.network)
-- [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
+- Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
+- Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
 
 ### Bridging
 
@@ -201,6 +200,7 @@ Key characteristics of TEEs:
 - [Verifiable Off-chain Compute - Florin Digital](https://florindigital.substack.com/p/verifiable-off-chain-compute-enabling)
 - [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
 - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
+- [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
 - [Blockchain × TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
 - [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
 - [TEE-based Smart Contracts and Sealing Pitfalls](https://medium.com/initc3org/tee-based-smart-contracts-and-sealing-pitfalls-eccd5d751329)
