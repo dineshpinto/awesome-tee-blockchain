@@ -56,10 +56,10 @@ Key characteristics of TEEs:
 
 ### Google Cloud Confidential Compute
 
-- [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24)
-- [Confidential Space](https://cloud.google.com/docs/security/confidential-space)
-- [Confidential Compute](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms)
-- [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation)
+- [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24) - Supports Intel TDX with Intel AMX, and NVIDIA H100 GPUs. 
+- [Confidential VMs](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms) - Supports AMD SEV, AMD SEV-SNP, and Intel TDX.
+- [Confidential Space](https://cloud.google.com/docs/security/confidential-space) - Supports trust model where the workload author, workload operator, and resource owners are separate, mutually distrusting parties.
+- [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation) - Attestation support for AMD SEV (vTPM), AMD SEV-SNP (vTPM and TSM), and Intel TDX (vTPM and TSM).
 
 ### Microsoft Azure Confidential Computing
 
@@ -151,6 +151,8 @@ Key characteristics of TEEs:
 ### Go
 
 - [google/go-tpm-tools](https://github.com/google/go-tpm-tools) - Go packages built on go-tpm providing a high-level API for using TPMs
+- [google/go-sev-guest](https://github.com/google/go-sev-guest) - go-sev-guest offers a library to wrap the /dev/sev-guest device in Linux, as well as a library for attestation verification of fundamental components of an attestation report.
+- [google/go-tdx-guest](https://github.com/google/go-tdx-guest) - go-tdx-guest offers a library to wrap the /dev/tdx-guest device in Linux, as well as a library for attestation verification of fundamental components of an attestation quote.
 - [matter-labs/vault-auth-tee](https://github.com/matter-labs/vault-auth-tee) - Hashicorp Vault plugin for authenticating Trusted Execution Environments (TEE) like SGX enclaves
 - [usbarmory/GoTEE](https://github.com/usbarmory/GoTEE) - Go Trusted Execution Environment (TEE)
 - [iotexproject/w3bstream](https://github.com/iotexproject/w3bstream) - An offchain computing layer for DePIN verifiable data computation, supporting a variety of validity proofs including Zero Knowledge (ZK), Trusted Execution Environments (TEE), and Multi-party Computation (MPC)
