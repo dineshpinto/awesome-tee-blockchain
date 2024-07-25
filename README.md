@@ -210,7 +210,9 @@ Key characteristics of TEEs:
 
 ## Videos
 
-- [How to Win Friends and TEE-fluence People - Ethan Buchman, Modular Summit 2024](https://www.youtube.com/watch?v=XwKIt5XYyqw)
+- [How to Win Friends and TEE-fluence People - Ethan Buchman, Modular Summit 2024](https://youtu.be/XwKIt5XYyqw)
+- [DEVMOS 2024: Dylan Kawalec (Osmosis), 'Building Decentralized Frontends', Modular Summit 2024](https://youtu.be/o1TY6sjMOek)
+- [The TEE Stack - Andrew Miller, Modular Summit 2024](https://youtu.be/9AwlMB8TF4o)
 - [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
 - [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
 - [TEE for Blockchain Applications - Ari Juels, a16z crypto 2023](https://youtu.be/Xq7oWtiwWII)
@@ -224,4 +226,5 @@ Key characteristics of TEEs:
 
 ## Tweet threads
 
-- [@buchmanster on TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
+- [@buchmanster, TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
+- [@buchmanster, How you win friends and TEE-fluence people - Chapter 2](https://x.com/buchmanster/status/1816443327241490662)
