@@ -195,6 +195,7 @@ Key characteristics of TEEs:
 - [Verifiable Off-chain Compute - Florin Digital](https://florindigital.substack.com/p/verifiable-off-chain-compute-enabling)
 - [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
 - [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
+- [Trustless Execution Environments - David Atterman](https://omnida.substack.com/p/trustless-execution-environments?r=nvn5c&utm_campaign=post&utm_medium=web&triedRedirect=true)
 - [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
 - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
 - [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
