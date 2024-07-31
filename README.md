@@ -163,6 +163,7 @@ Key characteristics of TEEs:
 
 ### C
 
+- [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [deislabs/mystikos](https://github.com/deislabs/mystikos) - Tools and runtime for launching unmodified container images in Trusted Execution Environments
 - [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [mofanv/PPFL](https://github.com/mofanv/PPFL) - Privacy-preserving Federated Learning with Trusted Execution Environments
