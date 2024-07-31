@@ -32,7 +32,7 @@ Key characteristics of TEEs:
 3. [Use Cases](#use-cases)
    - [Block Building](#block-building)
    - [Bridging](#bridging)
-   - [Digital Asset Management](#digital-asset-management)
+   - [Asset Management](#asset-management)
    - [General Compute](#general-compute)
    - [Privacy](#privacy)
    - [Rollups](#rollups)
@@ -102,11 +102,14 @@ Key characteristics of TEEs:
 
 ### Bridging
 
-- [Avalanche Bridge: Secure Cross-Chain Asset Transfers Using Intel SGX](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1)
+- Avalanche Bridge - [Website](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1), [ava-labs GitHub](https://github.com/ava-labs)
 
-### Digital Asset Management
+### Asset Management
 
-- [Fireblocks](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclaves) - Stores MPC key shares in an Intel SGX enclave as part of multi-layered security model
+- Turnkey - [Website](https://www.turnkey.com), [tkhq GitHub](https://github.com/tkhq)
+- Fireblocks - [Website](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclave), [fireblocks GitHub](https://github.com/fireblocks)
+- Cycles Money - [Website](https://cycles.money)
+- Solana Saga Seed Vault - [Website](https://solanamobile.com), [solana-mobile GitHub](https://github.com/solana-mobile)
 
 ### General Compute
 
@@ -118,6 +121,7 @@ Key characteristics of TEEs:
 
 - Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
 - Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
+- Enclave Markets - [Website](https://www.enclave.market)
 
 ### Rollups
 
@@ -172,6 +176,10 @@ Key characteristics of TEEs:
 ### Python
 
 - [ethernity-cloud/mvp-pox-node](https://github.com/ethernity-cloud/mvp-pox-node) - Ethernity Cloud Node
+
+### TS
+
+- [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK
 
 ## Research Papers
 
@@ -230,3 +238,4 @@ Key characteristics of TEEs:
 
 - [@buchmanster, TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
 - [@buchmanster, How you win friends and TEE-fluence people - Chapter 2](https://x.com/buchmanster/status/1816443327241490662)
+- [@DistributedMarz, Flashwares Live Session](https://x.com/DistributedMarz/status/1805640541360550110)
