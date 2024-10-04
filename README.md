@@ -27,6 +27,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
    - [Privacy](#privacy)
    - [Rollups](#rollups)
 4. [Repositories](#repositories)
+   - [General](#general)
    - [Rust](#rust)
    - [Go](#go)
    - [C++](#cpp)
@@ -119,6 +120,10 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ## Repositories
 
+### General
+
+- [sbellem/qtee](https://github.com/sbellem/qtee) - Exploring the physical limits of trusted hardware in the classical and quantum settings to achieve security through physics.
+
 ### Rust
 
 - [marlinprotocol/oyster-serverless](https://github.com/marlinprotocol/oyster-serverless) - Oyster Serverless is a cutting-edge, high-performance serverless computing platform designed to securely execute JavaScript (JS) and WebAssembly (WASM) code in a highly controlled environment.
@@ -157,6 +162,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ### C
 
+- [iisec-suzaki/optee-ra](https://github.com/iisec-suzaki/optee-ra) - OP-TEE Remote Attestation
 - [pietroborrello/CustomProcessingUnit](https://github.com/pietroborrello/CustomProcessingUnit) - The first analysis framework for CPU microcode
 - [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [deislabs/mystikos](https://github.com/deislabs/mystikos) - Tools and runtime for launching unmodified container images in Trusted Execution Environments
@@ -174,11 +180,13 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ## Research Papers
 
+- J. Zhu, H. Yin, P. Deng, and S. Zhou, "Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study", 2024 - [arXiv](https://arxiv.org/abs/2409.03992)
 - A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
 - H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
 - X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
 - Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
 - A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
+- M. Schneider, R.J. Masti, S. Shinde, S. Capkun, and R. Perez, "SoK: Hardware-supported Trusted Execution Environments", 2022 - [arXiv](https://arxiv.org/abs/2205.12742)
 - R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, "SoK: TEE-assisted Confidential Smart Contract", 2022 - [arXiv](https://arxiv.org/abs/2203.08548)
 - E. Puschner, T. Moos, S. Becker, C. Kison, A. Moradi, C. Paar, "Red Team vs. Blue Team: A Real-World Hardware Trojan Detection Case Study Across Four Modern CMOS Technology Generations", 2022 - [Cryptology ePrint Archive](https://eprint.iacr.org/2022/1720)
 - R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
@@ -193,7 +201,10 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ## Articles
 
-- [Building Secure Ethereum Blocks on Minimal Intel TDX Confidential VMs, Flashbots Collective](https://collective.flashbots.net/t/building-secure-ethereum-blocks-on-minimal-intel-tdx-confidential-vms/3795)
+- [A few notes on AWS Nitro Enclaves: Attack surface - Trail of Bits Blog](https://blog.trailofbits.com/2024/09/24/notes-on-aws-nitro-enclaves-attack-surface/)
+- [Early Thoughts on Decentralized Root-of-Trust - Flashbots Collective](https://collective.flashbots.net/t/early-thoughts-on-decentralized-root-of-trust/3868)
+- [Drawbacks In FHE Blockchain And How TEE Can Help It - Flashbots Collective](https://collective.flashbots.net/t/drawbacks-in-fhe-blockchain-and-how-tee-can-help-it/3642)
+- [Building Secure Ethereum Blocks on Minimal Intel TDX Confidential VMs - Flashbots Collective](https://collective.flashbots.net/t/building-secure-ethereum-blocks-on-minimal-intel-tdx-confidential-vms/3795)
 - [TDX Security For BOB Searchers, Flashbots](https://flashbots.notion.site/TDX-Security-For-BOB-Searchers-aedb060eb75b48a2a5de0e2131c9c7ef)
 - [Chapter 3 - Verifiable Off-chain Compute: Enabling an Instagram-like experience for Web3 - Florin Digital](https://florindigital.substack.com/p/chapter-3-verifiable-off-chain-compute)
 - [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
