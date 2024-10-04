@@ -4,19 +4,11 @@ A curated list of resources for learning about Trusted Execution Environments (T
 
 ## What are TEEs?
 
-Trusted Execution Environments (TEEs) are secure areas within a main processor that ensure the integrity and confidentiality of the code and data loaded inside. TEEs provide a higher level of security than the normal execution environment by isolating the execution of sensitive applications and data from the rest of the system.
+Here's a refined version of the text:
 
-In the context of blockchains, TEEs are primarily used to enhance compute and data storage capabilities, ideally with minimal compromise to security, verifiability and decentralization.
+A Trusted Execution Environment (TEE) is a secure, isolated area within a device or network designed to safeguard sensitive data during storage, processing, and execution. TEEs provide a protected space where programs can run with confidentiality and integrity, even if the broader system is compromised, ensuring tamper-resistant computation.
 
-Key characteristics of TEEs:
-
-1. **Isolation**: TEEs separate sensitive code and data from the regular operating system and applications. This isolation helps protect against a wide range of attacks, including those from malicious software running on the main OS.
-
-2. **Confidentiality and Integrity**: TEEs ensure that the data processed within them is protected from unauthorized access and tampering. This is crucial for sensitive operations such as cryptographic computations and handling confidential data.
-
-3. **Secure Boot and Secure Storage**: TEEs support secure boot mechanisms to ensure that only authenticated and trusted code can be executed. They also provide secure storage for keys and other sensitive data.
-
-4. **Attestation**: TEEs can generate cryptographic proofs (attestations) that confirm the authenticity and integrity of the code running within them. This allows external parties to verify that the TEE is running legitimate and unaltered code.
+In addition to this security, TEEs offer attestation capabilities that provide enhanced trust guarantees. Attestation is a cryptographic proof that allows a TEE to verify to a remote party that a program is running (or has run) without any interference. This mechanism reinforces trust in the TEE by proving that specific operations have been executed without tampering, offering third-party verification of computational correctness.
 
 ## Table of Contents
 
