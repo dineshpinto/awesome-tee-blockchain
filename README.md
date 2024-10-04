@@ -4,8 +4,6 @@ A curated list of resources for learning about Trusted Execution Environments (T
 
 ## What are TEEs?
 
-Here's a refined version of the text:
-
 A Trusted Execution Environment (TEE) is a secure, isolated area within a device or network designed to safeguard sensitive data during storage, processing, and execution. TEEs provide a protected space where programs can run with confidentiality and integrity, even if the broader system is compromised, ensuring tamper-resistant computation.
 
 In addition to this security, TEEs offer attestation capabilities that provide enhanced trust guarantees. Attestation is a cryptographic proof that allows a TEE to verify to a remote party that a program is running (or has run) without any interference. This mechanism reinforces trust in the TEE by proving that specific operations have been executed without tampering, offering third-party verification of computational correctness.
