@@ -33,6 +33,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
    - [C++](#cpp)
    - [C](#c)
    - [Python](#python)
+   - [TypeScript](#typescript)
 5. [Research Papers](#research-papers)
 6. [Articles](#articles)
 7. [Videos](#videos)
@@ -123,9 +124,13 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 ### General
 
 - [sbellem/qtee](https://github.com/sbellem/qtee) - Exploring the physical limits of trusted hardware in the classical and quantum settings to achieve security through physics.
+- [orbstack/orbstack](https://github.com/orbstack/orbstack) - Fast, light, simple Docker containers & Linux machines
+- [bpradipt/awesome-confidential-computing](https://github.com/bpradipt/awesome-confidential-computing) - Collection of resources on Confidential Computing
+- [erayack/awesome-sgx-blockchain](https://github.com/erayack/awesome-sgx-blockchain) - Awesome SGX and TEE on Blockchain Resources
 
 ### Rust
 
+- [Dstack-TEE/dstack](https://github.com/Dstack-TEE/dstack) - Dstack is a developer friendly and security first SDK to simplify the deployment of arbitrary Docker-based apps into TEE.
 - [marlinprotocol/oyster-serverless](https://github.com/marlinprotocol/oyster-serverless) - Oyster Serverless is a cutting-edge, high-performance serverless computing platform designed to securely execute JavaScript (JS) and WebAssembly (WASM) code in a highly controlled environment.
 - [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) - The Phala Network Blockchain, pRuntime and the bridge.
 - [kata-containers/kata-containers](https://github.com/kata-containers/kata-containers) - Kata Containers is an open source project and community working to build a standard implementation of lightweight Virtual Machines (VMs) that feel and perform like containers, but provide the workload isolation and security advantages of VMs.
@@ -175,7 +180,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 - [ethernity-cloud/mvp-pox-node](https://github.com/ethernity-cloud/mvp-pox-node) - Ethernity Cloud Node
 
-### TS
+### TypeScript
 
 - [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK
 
