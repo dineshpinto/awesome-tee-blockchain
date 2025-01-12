@@ -154,6 +154,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ### CPP
 
+- [NixOS/nix](https://github.com/NixOS/nix) - Nix, the purely functional package manager
 - [microsoft/azure-tee-attestation-samples](https://github.com/microsoft/azure-tee-attestation-samples) - Trusted Execution Environment examples leveraging attestations on Azure
 - [intel/linux-sgx](https://github.com/intel/linux-sgx) - Intel SGX for Linux
 - [lsds/Teechain](https://github.com/lsds/Teechain) - Teechain: A Secure Payment Network with Asynchronous Blockchain Access
@@ -201,6 +202,8 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ## Articles
 
+- [TEE Bible - Your First Stop for TEE in Crypto](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d)
+- [Securing TEE Apps: A Developer's Guide - Bedlam Research](https://www.bedlamresear.ch/posts/securing-tee-apps/#the-security-model)
 - [A few notes on AWS Nitro Enclaves: Attack surface - Trail of Bits Blog](https://blog.trailofbits.com/2024/09/24/notes-on-aws-nitro-enclaves-attack-surface/)
 - [Early Thoughts on Decentralized Root-of-Trust - Flashbots Collective](https://collective.flashbots.net/t/early-thoughts-on-decentralized-root-of-trust/3868)
 - [Drawbacks In FHE Blockchain And How TEE Can Help It - Flashbots Collective](https://collective.flashbots.net/t/drawbacks-in-fhe-blockchain-and-how-tee-can-help-it/3642)
@@ -243,6 +246,7 @@ In addition to this security, TEEs offer attestation capabilities that provide e
 
 ## Tweet threads
 
+- [@CP2426\_, focEliza Verifiable Terminal Release](https://x.com/CP2426_/status/1871929921356067282)
 - [@\_markel\_\_\_, Extraction of Intel SGX Fuse Key0](https://x.com/_markel___/status/1828112469010596347)
 - [@PratyushRT, Breakdown of the Intel SGX (TEE) breach](https://x.com/pratyushrt/status/1828183761055330373?s=46)
 - [@buchmanster, TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
