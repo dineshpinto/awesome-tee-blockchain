@@ -216,6 +216,7 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 ### 2024
 
+- M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, "Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel's RA-TLS Protocol", 2024 - [IEEE](https://ieeexplore.ieee.org/document/10752524/authors#authors)
 - J. Zhu, H. Yin, P. Deng, and S. Zhou, "Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study", 2024 - [arXiv](https://arxiv.org/abs/2409.03992)
 - A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
 - H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
