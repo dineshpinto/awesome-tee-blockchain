@@ -25,6 +25,7 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
    - [AMD](#amd)
    - [NVIDIA](#nvidia)
    - [ARM](#arm)
+   - [OpenTitan](#opentitan)
 3. [Applications in Blockchain](#applications-in-blockchain)
    - [AI](#ai)
    - [Block Building](#block-building)
@@ -103,6 +104,11 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 - [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture) - Under development. Key component of the Armv9-A architecture
 - [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.) - Isolates critical security firmware, assets and private information for Armv8-M based devices
+
+### OpenTitan
+
+- [OpenTitan](https://opentitan.org): open source project building a reference design and integration guidelines for silicon root of trust (RoT) chips.
+- Open source silicon root of trust GitHub - [lowRISC/opentitan](https://github.com/lowRISC/opentitan)
 
 ## Applications in Blockchain
 
