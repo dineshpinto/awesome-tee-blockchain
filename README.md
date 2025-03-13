@@ -268,6 +268,7 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 ### Hardware Implementations
 
+- [We call this kernel saunters: How Apple rearranged its XNU core with exclaves - The Register](https://www.theregister.com/2025/03/08/kernel_sanders_apple_rearranges_xnu/)
 - [Intel SGX Explained](https://css.csail.mit.edu/6.858/2020/readings/costan-sgx.pdf)
 - [Demystifying SGX — Part 1 - Obscuro Labs](https://medium.com/obscuro-labs/intel-sgx-demystified-757a242682a3)
 - [A few notes on AWS Nitro Enclaves: Attack surface - Trail of Bits Blog](https://blog.trailofbits.com/2024/09/24/notes-on-aws-nitro-enclaves-attack-surface/)
@@ -328,6 +329,7 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 ## Tweet threads
 
+- [@P3b7_, Donjon Ledger analysis of Trezor Safe 3](https://x.com/P3b7_/status/1899863743036874795)
 - [@CP2426\_, focEliza Verifiable Terminal Release](https://x.com/CP2426_/status/1871929921356067282)
 - [@\_markel\_\_\_, Extraction of Intel SGX Fuse Key0](https://x.com/_markel___/status/1828112469010596347)
 - [@PratyushRT, Breakdown of the Intel SGX (TEE) breach](https://x.com/pratyushrt/status/1828183761055330373?s=46)
