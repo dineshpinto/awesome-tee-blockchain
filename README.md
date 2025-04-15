@@ -1,6 +1,60 @@
 # Awesome TEE Blockchain
 
-A curated list of resources for learning about Trusted Execution Environments (TEEs) in the context of blockchains. This list includes articles, research papers, tweet threads, code repositories, videos, and more.
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+A curated list of resources for learning about Trusted Execution Environments (TEEs) and their applications in the blockchain space.
+This list includes foundational concepts, specific technologies, applications, security considerations, research, code, articles, videos, and more.
+
+_Contributions are welcome!_
+
+## Table of Contents
+
+1.  [What are TEEs?](#what-are-tees)
+2.  [Why TEEs in Blockchain?](#why-tees-in-blockchain)
+3.  [Core Concepts & Technologies](#core-concepts--technologies)
+    - [Hardware Platforms](#hardware-platforms)
+      - [Intel](#intel)
+      - [AMD](#amd)
+      - [NVIDIA](#nvidia)
+      - [ARM](#arm)
+      - [OpenTitan](#opentitan)
+    - [Cloud TEE Offerings](#cloud-tee-offerings)
+      - [Google Cloud](#google-cloud)
+      - [Microsoft Azure](#microsoft-azure)
+      - [Amazon AWS](#amazon-aws)
+    - [TEE SDKs & Frameworks](#tee-sdks--frameworks)
+4.  [Blockchain Applications & Use Cases Leveraging TEEs](#blockchain-applications--use-cases-leveraging-tees)
+    - [AI](#ai)
+    - [Block Building & MEV Mitigation](#block-building--mev-mitigation)
+    - [Bridging](#bridging)
+    - [Asset Management & Wallets](#asset-management--wallets)
+    - [General Off-Chain Compute](#general-off-chain-compute)
+    - [Privacy & Confidentiality](#privacy--confidentiality)
+    - [Rollups & Coprocessors](#rollups--coprocessors)
+5.  [Security Considerations & Attacks](#security-considerations--attacks)
+6.  [Learning Resources](#learning-resources)
+    - [Introductory & Overview Articles](#introductory--overview-articles)
+    - [Technical Deep Dive Articles](#technical-deep-dive-articles)
+    - [Research Papers](#research-papers)
+      - [2024](#2024)
+      - [2023](#2023)
+      - [2022](#2022)
+      - [2021](#2021)
+      - [Pre-2020](#pre-2020)
+    - [Videos](#videos)
+      - [Conference Talks](#conference-talks)
+      - [Technical Presentations](#technical-presentations)
+      - [Workshops and Tutorials](#workshops--tutorials)
+    - [Tweet Threads](#tweet-threads)
+7.  [Code Repositories](#code-repositories)
+    - [Awesome Lists & General Resources](#awesome-lists--general-resources)
+    - [Rust](#rust)
+    - [Go](#go)
+    - [C++](#cpp)
+    - [C](#c)
+    - [Python](#python)
+    - [TypeScript](#typescript)
+8.  [Community & Events](#community--events)
 
 ## What are TEEs?
 
@@ -14,109 +68,91 @@ A Trusted Execution Environment (TEE) is a secure, isolated area within a device
 
 A rough analogy is to think of it as a secure room with unbreakable walls, where computations happen privately and everyone can verify the results without seeing inside.
 
-## Table of Contents
+## Why TEEs in Blockchain?
 
-1. [Cloud Providers](#cloud-providers)
-   - [Google Cloud](#google-cloud)
-   - [Microsoft Azure](#microsoft-azure)
-   - [Amazon AWS](#amazon-aws)
-2. [Hardware](#hardware)
-   - [Intel](#intel)
-   - [AMD](#amd)
-   - [NVIDIA](#nvidia)
-   - [ARM](#arm)
-   - [OpenTitan](#opentitan)
-3. [Applications in Blockchain](#applications-in-blockchain)
-   - [AI](#ai)
-   - [Block Building](#block-building)
-   - [Bridging](#bridging)
-   - [Asset Management](#asset-management)
-   - [General Compute](#general-compute)
-   - [Privacy](#privacy)
-   - [Rollups](#rollups)
-4. [Code Repositories](#code-repositories)
-   - [General](#general)
-   - [Rust](#rust)
-   - [Go](#go)
-   - [C++](#cpp)
-   - [C](#c)
-   - [Python](#python)
-   - [TypeScript](#typescript)
-5. [Research Papers](#research-papers)
-   - [2024](#2024)
-   - [2023](#2024)
-   - [2022](#2024)
-   - [2021](#2024)
-   - [Pre-2020](#pre-2020)
-6. [Articles](#articles)
-   - [Introductory & Overview](#introductory--overview)
-   - [Hardware Implementations](#hardware-implementations)
-   - [Block Building and MEV](#block-building-and-mev)
-   - [Development and Security](#development-and-security)
-   - [Privacy & ZK Comparisons](#privacy--zk-comparisons)
-   - [Ecosystem & Implementation Examples](#ecosystem--implementation-examples)
-   - [Conference & Event Summaries](#conference--event-summaries)
-7. [Videos](#videos)
-   - [Conference Talks](#conference-talks)
-   - [Technical Presentations](#technical-presentations)
-   - [Workshops and Tutorials](#workshops--tutorials)
-8. [Tweet Threads](#tweet-threads)
+TEEs offer compelling solutions to several challenges in the blockchain space:
 
-## Cloud Providers
+- **Verifiable Off-Chain Computation:** Performing complex computations off-chain within a TEE and submitting only the results and proof back to the chain enhances scalability and reduces gas costs.
+- **Confidentiality:** Running smart contracts or parts of protocols within a TEE can protect sensitive data (e.g., private transaction details, user data) from validators or observers.
+- **MEV Mitigation:** TEEs can be used to create encrypted mempools or fair ordering systems, preventing front-running and other MEV extraction strategies.
+- **Key Management:** TEEs offer hardware-level protection for private keys used in wallets or validators.
 
-### Google Cloud
+## Core Concepts & Technologies
+
+This section covers the foundational hardware, cloud services, and software frameworks enabling TEE usage.
+
+### Hardware Platforms
+
+The underlying silicon providing TEE capabilities.
+
+#### Intel
+
+- [Advanced Matrix Extensions (AMX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html) - Accelerator to improve the performance of deep-learning training and inference on the CPU
+- [Trust Domain Extensions (TDX)](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html?wapkw=TDX) - Latest Hardware-based TEE architecture from Intel
+- [Software Guard Extensions (SGX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html) - Protects data actively being used in the processor and memory by creating a TEE
+
+#### AMD
+
+- [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf) - Improved I/O performance and security in AMD SEV-SNP guests
+- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf) - Expands on SEV, adds memory integrity protection to help prevent malicious hypervisor-based attacks
+- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html) - Hardware-based memory encryption through the AMD Secure Processor
+
+#### NVIDIA
+
+- [H100 TensorCore GPU](https://www.nvidia.com/en-us/data-center/h100/?ncid=so-link-915436-vt04#cid=hpc09_so-link_en-us) - Hardware-based trusted execution environment with NVIDIA Hopper and NVIDIA Blackwell architecture support
+- [Hopper Architecture](https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/) - Accelerated computing platform for AI
+- [Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) - Latest HW generation with accelerated computing and generative AI optimizations
+
+#### ARM
+
+- [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture) - Under development. Key component of the Armv9-A architecture
+- [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.) - Isolates critical security firmware, assets and private information for Armv8-M based devices
+
+#### OpenTitan
+
+- [OpenTitan](https://opentitan.org): open source project building a reference design and integration guidelines for silicon root of trust (RoT) chips.
+- Open source silicon root of trust GitHub - [lowRISC/opentitan](https://github.com/lowRISC/opentitan)
+
+### Cloud TEE Offerings
+
+Major cloud providers offering virtual machines or services utilizing TEE hardware.
+
+#### Google Cloud
 
 - [Confidential Accelerator for AI workloads](https://cloud.google.com/blog/products/identity-security/expanding-confidential-computing-for-ai-workloads-next24) - Supports Intel TDX with Intel AMX, and NVIDIA H100 GPUs.
 - [Confidential VMs](https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-confidential-computing-with-confidential-vms) - Supports AMD SEV, AMD SEV-SNP, and Intel TDX.
 - [Confidential Space](https://cloud.google.com/docs/security/confidential-space) - Supports trust model where the workload author, workload operator, and resource owners are separate, mutually distrusting parties.
 - [Confidential VM attestation](https://cloud.google.com/confidential-computing/confidential-vm/docs/attestation) - Attestation support for AMD SEV (vTPM), AMD SEV-SNP (vTPM and TSM), and Intel TDX (vTPM and TSM).
 
-### Microsoft Azure
-
-- [Azure Confidential VM](https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-vm-overview)
-
-### Amazon AWS
+#### Amazon AWS
 
 - [Nitro](https://aws.amazon.com/ec2/nitro/)
 - [Nitro Enclaves](https://aws.amazon.com/ec2/nitro/nitro-enclaves/)
 
-## Hardware
+#### Microsoft Azure
 
-### Intel
+- [Azure Confidential VM](https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-vm-overview)
 
-- [Advanced Matrix Extensions (AMX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html) - Accelerator to improve the performance of deep-learning training and inference on the CPU
-- [Trust Domain Extensions (TDX)](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html?wapkw=TDX) - Latest Hardware-based TEE architecture from Intel
-- [Software Guard Extensions (SGX)](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html) - Protects data actively being used in the processor and memory by creating a TEE
+### TEE SDKs & Frameworks
 
-### AMD
+Tools and libraries simplifying the development of applications running inside TEEs.
 
-- [Secure Encrypted Virtualization-Trusted I/O (SEV-TIO)](https://www.amd.com/content/dam/amd/en/documents/developer/sev-tio-whitepaper.pdf) - Improved I/O performance and security in AMD SEV-SNP guests
-- [Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP)](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf) - Expands on SEV, adds memory integrity protection to help prevent malicious hypervisor-based attacks
-- [Secure Encrypted Virtualization (SEV)](https://www.amd.com/en/developer/sev.html) - Hardware-based memory encryption through the AMD Secure Processor
+- [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing TEE applications (enclaves) across different hardware platforms (SGX, OP-TEE).
+- [apache/incubator-teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk) - Apache Teaclave (incubating) SGX SDK helps developers write Intel SGX applications in the Rust programming language.
+- [intel/linux-sgx](https://github.com/intel/linux-sgx) - Intel SGX SDK and Platform Software (PSW) for Linux.
+- [Gramine Project](https://gramineproject.io/) - Library OS, allowing unmodified Linux applications to run in Intel SGX enclaves.
+- [Microsoft/confidential-container-demos](https://github.com/microsoft/confidential-container-demos) - Demos for running containers in confidential environments on Azure.
+- [confidential-containers/confidential-containers](https://github.com/confidential-containers/confidential-containers) - An open-source project enabling cloud-native confidential computing by shielding containerized workloads.
 
-### NVIDIA
+## Blockchain Applications & Use Cases Leveraging TEEs
 
-- [H100 TensorCore GPU](https://www.nvidia.com/en-us/data-center/h100/?ncid=so-link-915436-vt04#cid=hpc09_so-link_en-us) - Hardware-based trusted execution environment with NVIDIA Hopper and NVIDIA Blackwell architecture support
-- [Hopper Architecture](https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/) - Accelerated computing platform for AI
-- [Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) - Latest HW generation with accelerated computing and generative AI optimizations
-
-### ARM
-
-- [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture) - Under development. Key component of the Armv9-A architecture
-- [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.) - Isolates critical security firmware, assets and private information for Armv8-M based devices
-
-### OpenTitan
-
-- [OpenTitan](https://opentitan.org): open source project building a reference design and integration guidelines for silicon root of trust (RoT) chips.
-- Open source silicon root of trust GitHub - [lowRISC/opentitan](https://github.com/lowRISC/opentitan)
-
-## Applications in Blockchain
+Examples of how TEEs are being used or proposed within the blockchain ecosystem.
 
 ### AI
 
 - [TEE plugin for ELIZA (using dstack from Phala)](https://elizaos.github.io/eliza/docs/advanced/eliza-in-tee/)
 
-### Block Building
+### Block Building & MEV Mitigation
 
 - [Unichain](https://docs.unichain.org/whitepaper.pdf)
 - [The Future of MEV is SUAVE](https://writings.flashbots.net/the-future-of-mev-is-suave)
@@ -129,38 +165,152 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 - Avalanche Bridge - [Website](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1), [ava-labs GitHub](https://github.com/ava-labs)
 
-### Asset Management
+### Asset Management & Wallets
 
 - Turnkey - [Website](https://www.turnkey.com), [tkhq GitHub](https://github.com/tkhq)
 - Fireblocks - [Website](https://developers.fireblocks.com/docs/what-is-fireblocks#layer-2-secure-enclave), [fireblocks GitHub](https://github.com/fireblocks)
 - Cycles Money - [Website](https://cycles.money)
 - Solana Saga Seed Vault - [Website](https://solanamobile.com), [solana-mobile GitHub](https://github.com/solana-mobile)
 
-### General Compute
+### General Off-Chain Compute
 
 - Marlin Protocol - [Website](https://www.marlin.org/), [marlinprotocol GitHub](https://github.com/marlinprotocol)
 - Phala Network - [Website](https://phala.network/), [Phala-Network GitHub](https://github.com/Phala-Network)
 - Automata Network - [Website](https://ata.network/), [automata-network GitHub](https://github.com/automata-network)
 
-### Privacy
+### Privacy & Confidentiality
 
 - Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
 - Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
 - Enclave Markets - [Website](https://www.enclave.market)
 
-### Rollups
+### Rollups & Coprocessors
 
 - Taiko - [Website](https://taiko.xyz/), [taikoxyz GitHub](https://github.com/taikoxyz)
 - Unichain - [Website](https://www.unichain.org)
 
+## Security Considerations & Attacks
+
+Understanding the security guarantees and limitations of TEEs is crucial.
+
+- [A Survey of Published Attacks on Intel SGX - Nilsson et al. (2020)](https://arxiv.org/abs/2006.13598)
+- [Plundervolt: Software-based Fault Injection Attacks against Intel SGX - Murdock et al. (2020)](https://ieeexplore.ieee.org/document/9152636)
+- [Securing TEE Apps: A Developer's Guide - Bedlam Research](https://www.bedlamresear.ch/posts/securing-tee-apps)
+- [TEE-based Smart Contracts and Sealing Pitfalls - IC3](https://medium.com/initc3org/tee-based-smart-contracts-and-sealing-pitfalls-eccd5d751329)
+- [A few notes on AWS Nitro Enclaves: Attack surface - Trail of Bits Blog](https://blog.trailofbits.com/2024/09/24/notes-on-aws-nitro-enclaves-attack-surface/)
+
+## Learning Resources
+
+Articles, papers, videos, and discussions diving deeper into TEEs and their blockchain intersection.
+
+### Introductory & Overview Articles
+
+- [TEE Bible - Your First Stop for TEE in Crypto](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d)
+- [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
+- [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
+- [Trustless Execution Environments - David Atterman](https://omnida.substack.com/p/trustless-execution-environments?r=nvn5c&utm_campaign=post&utm_medium=web&triedRedirect=true)
+- [Chapter 3 - Verifiable Off-chain Compute: Enabling an Instagram-like experience for Web3 - Florin Digital](https://florindigital.substack.com/p/chapter-3-verifiable-off-chain-compute)
+- [Blockchain x TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
+- [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
+- [Intel SGX Explained](https://css.csail.mit.edu/6.858/2020/readings/costan-sgx.pdf)
+- [Demystifying SGX — Part 1 - Obscuro Labs](https://medium.com/obscuro-labs/intel-sgx-demystified-757a242682a3)
+- [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
+
+### Technical Deep Dive Articles
+
+- [We call this kernel saunters: How Apple rearranged its XNU core with exclaves - The Register](https://www.theregister.com/2025/03/08/kernel_sanders_apple_rearranges_xnu/)
+- [Building Secure Ethereum Blocks on Minimal Intel TDX Confidential VMs - Flashbots Collective](https://collective.flashbots.net/t/building-secure-ethereum-blocks-on-minimal-intel-tdx-confidential-vms/3795)
+- [TDX Security For BOB Searchers, Flashbots](https://flashbots.notion.site/TDX-Security-For-BOB-Searchers-aedb060eb75b48a2a5de0e2131c9c7ef)
+- [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
+- [Nix + Bazel: Fully reproducible, incremental builds](https://www.tweag.io/blog/2018-03-15-bazel-nix/)
+- [Early Thoughts on Decentralized Root-of-Trust - Flashbots Collective](https://collective.flashbots.net/t/early-thoughts-on-decentralized-root-of-trust/3868)
+- [Drawbacks In FHE Blockchain And How TEE Can Help It - Flashbots Collective](https://collective.flashbots.net/t/drawbacks-in-fhe-blockchain-and-how-tee-can-help-it/3642)
+- [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
+- [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem)
+- [Intel SGX and Blockchain: The iExec End-to-End Trusted Execution Solution](https://medium.com/iex-ec/iexec-end-to-end-sgx-solution-fee1e63297b2)
+- [Blockchains in Trusted Execution Environments (TEEs)](https://medium.com/@nadeem.bhati/blockchains-in-trusted-execution-environments-tees-9343b6c3f9e8)
+- [Blockchains + TEEs Day 1 Summary](https://decentralizedthoughts.github.io/2023-04-09-blockchainsplustees-day1-summary/)
+- [Blockchains + TEEs Day 2 Summary](https://decentralizedthoughts.github.io/2023-04-17-blockchainsplustees-day2-summary/)
+
+### Research Papers
+
+#### 2024
+
+- M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, "Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel's RA-TLS Protocol", 2024 - [IEEE](https://ieeexplore.ieee.org/document/10752524/)
+- J. Zhu, H. Yin, P. Deng, and S. Zhou, "Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study", 2024 - [arXiv](https://arxiv.org/abs/2409.03992)
+- A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
+- H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
+- X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
+
+#### 2023
+
+- Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
+- A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
+
+#### 2022
+
+- M. Schneider, R.J. Masti, S. Shinde, S. Capkun, and R. Perez, "SoK: Hardware-supported Trusted Execution Environments", 2022 - [arXiv](https://arxiv.org/abs/2205.12742)
+- R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, "SoK: TEE-assisted Confidential Smart Contract", 2022 - [arXiv](https://arxiv.org/abs/2203.08548)
+- E. Puschner, T. Moos, S. Becker, C. Kison, A. Moradi, C. Paar, "Red Team vs. Blue Team: A Real-World Hardware Trojan Detection Case Study Across Four Modern CMOS Technology Generations", 2022 - [Cryptology ePrint Archive](https://eprint.iacr.org/2022/1720)
+- R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
+
+#### 2021
+
+- C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, and X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
+- D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, “CHEX-MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two-party Oblivious Inference in the Cloud”, 2021. - [Cryptology ePrint Archive](https://eprint.iacr.org/2021/1603)
+
+#### Pre-2020
+
+- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, and B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
+- R. Cheng, F. Zhang, J. Kos, W. He, N. Hynes, N. Johnson, A. Juels, and A. Miller, "Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contracts", 2019 - [IEEE](https://ieeexplore.ieee.org/document/8806762)
+- G. Kaptchuk, I. Miers, and M. Green, "Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers" , 2017 - [Cryptology ePrint Archive](https://eprint.iacr.org/2017/201)
+- J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, "Teechain: A Secure Payment Network with Asynchronous Blockchain Access", 2017. - [arXiv](https://arxiv.org/abs/1707.05454)
+
+### Videos
+
+#### Conference Talks
+
+- [How to Win Friends and TEE-fluence People - Ethan Buchman, Modular Summit 2024](https://youtu.be/XwKIt5XYyqw)
+- [The TEE Stack - Andrew Miller, Modular Summit 2024](https://youtu.be/9AwlMB8TF4o)
+- [Private Smart Contracts are Worth the Price of the SGX - Andrew Miller, ETHDenver 2023](https://youtu.be/L0bp6V1pn0s)
+- [Protected Order Flow for Fair Transaction-Ordering in a Profit-Seeking World - Kushal Babel, MEV-SBC 2023](https://youtu.be/v1TkocRScJg)
+- [Enabling Cross Chain Transfers Using SGX - Michael Kaplan, Avalanche Summit 2022](https://youtu.be/f2bU55ngO_c)
+- [Trusted Execution Environments Meet the Blockchain - Ittay Eyal, Simons Institute 2019](https://youtu.be/J-8RdvvpUzM)
+
+#### Technical Presentations
+
+- [DEVMOS 2024: Dylan Kawalec (Osmosis), 'Building Decentralized Frontends', Modular Summit 2024](https://youtu.be/o1TY6sjMOek)
+- [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
+- [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
+- [TEE for Blockchain Applications - Ari Juels, a16z crypto 2023](https://youtu.be/Xq7oWtiwWII)
+- [SGX Panel 2023: Andrew Miller, Jonathan Passerat Palmbach, Phil Daian, Justin Drake](https://youtu.be/vokDXJmPCSI)
+
+#### Workshops & Tutorials
+
+- [Phala Network: 'The Magic of TEEs' - Online Workshop on TEE Basics](https://www.youtube.com/watch?v=Rpv4ZNOcNsM)
+- [Blockchains + TEEs 2023: Day 1 - Kartik Nayan, Ittai Abraham, Aniket Kate](https://youtu.be/9-nhNQO5_Js)
+- [Blockchains + TEEs 2023: Day 2 - Kartik Nayan, Ittai Abraham, Aniket Kate](https://youtu.be/zIU3gFTb2PM)
+
+### Tweet threads
+
+- [@P3b7\_, Donjon Ledger analysis of Trezor Safe 3](https://x.com/P3b7_/status/1899863743036874795)
+- [@CP2426\_, focEliza Verifiable Terminal Release](https://x.com/CP2426_/status/1871929921356067282)
+- [@\_markel\_\_\_, Extraction of Intel SGX Fuse Key0](https://x.com/_markel___/status/1828112469010596347)
+- [@PratyushRT, Breakdown of the Intel SGX (TEE) breach](https://x.com/pratyushrt/status/1828183761055330373?s=46)
+- [@buchmanster, TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
+- [@buchmanster, How you win friends and TEE-fluence people - Chapter 2](https://x.com/buchmanster/status/1816443327241490662)
+- [@DistributedMarz, Flashwares Live Session](https://x.com/DistributedMarz/status/1805640541360550110)
+
 ## Code Repositories
 
-### General
+Software related to TEEs in the context of blockchain, libraries, and example implementations.
 
-- [sbellem/qtee](https://github.com/sbellem/qtee) - Exploring the physical limits of trusted hardware in the classical and quantum settings to achieve security through physics.
-- [orbstack/orbstack](https://github.com/orbstack/orbstack) - Fast, light, simple Docker containers & Linux machines
+### Awesome Lists & General Resources
+
 - [bpradipt/awesome-confidential-computing](https://github.com/bpradipt/awesome-confidential-computing) - Collection of resources on Confidential Computing
 - [erayack/awesome-sgx-blockchain](https://github.com/erayack/awesome-sgx-blockchain) - Awesome SGX and TEE on Blockchain Resources
+- [sbellem/qtee](https://github.com/sbellem/qtee) - Exploring the physical limits of trusted hardware in the classical and quantum settings to achieve security through physics.
+- [orbstack/orbstack](https://github.com/orbstack/orbstack) - Fast, light, simple Docker containers & Linux machines
 
 ### Rust
 
@@ -176,7 +326,6 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 - [integritee-network/worker](https://github.com/integritee-network/worker) - Integritee off-chain worker and sidechain validateer
 - [capsule-corp-ternoa/ternoa-node](https://github.com/capsule-corp-ternoa/ternoa-node) - Ternoa's Node Implementation
 - [automata-network/automata](https://github.com/automata-network/automata) - Automata Network is a modular attestation layer that extends machine trust to Ethereum with TEE Coprocessors.
-- [apache/incubator-teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk) - Apache Teaclave (incubating) SGX SDK helps developers to write Intel SGX applications in the Rust programming language, and also known as Rust SGX SDK.
 - [apache/incubator-teaclave](https://github.com/apache/incubator-teaclave) - Apache Teaclave (incubating) is an open source universal secure computing platform, making computation on privacy-sensitive data safe and simple.
 - [scrtlabs/incubator-teaclave-sgx-sdk](https://github.com/scrtlabs/incubator-teaclave-sgx-sdk) - Rust SGX SDK provides the ability to write Intel SGX applications in Rust Programming Language. Fork of `apache/incubator-teaclave-sgx-sdk`.
 
@@ -195,7 +344,6 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 - [NixOS/nix](https://github.com/NixOS/nix) - Nix, the purely functional package manager
 - [microsoft/azure-tee-attestation-samples](https://github.com/microsoft/azure-tee-attestation-samples) - Trusted Execution Environment examples leveraging attestations on Azure
-- [intel/linux-sgx](https://github.com/intel/linux-sgx) - Intel SGX for Linux
 - [lsds/Teechain](https://github.com/lsds/Teechain) - Teechain: A Secure Payment Network with Asynchronous Blockchain Access
 - [skalenetwork/sgxwallet](https://github.com/skalenetwork/sgxwallet) - sgxwallet is the first-ever opensource high-performance hardware secure crypto wallet that is based on Intel SGX technology. First opensource product on Intel SGX whitelist. Scales to 100,000+ transactions per second. Currently supports ETH and SKALE, and will support BTC in the future. Sgxwallet is under heavy development and use by SKALE network.
 - [hyperledger-labs/private-data-objects](https://github.com/hyperledger-labs/private-data-objects) - The Private Data Objects lab provides technology for confidentiality-preserving, off-chain smart contracts.
@@ -204,9 +352,7 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 - [iisec-suzaki/optee-ra](https://github.com/iisec-suzaki/optee-ra) - OP-TEE Remote Attestation
 - [pietroborrello/CustomProcessingUnit](https://github.com/pietroborrello/CustomProcessingUnit) - The first analysis framework for CPU microcode
-- [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [deislabs/mystikos](https://github.com/deislabs/mystikos) - Tools and runtime for launching unmodified container images in Trusted Execution Environments
-- [openenclave/openenclave](https://github.com/openenclave/openenclave) - SDK for developing enclaves
 - [mofanv/PPFL](https://github.com/mofanv/PPFL) - Privacy-preserving Federated Learning with Trusted Execution Environments
 - [inclavare-containers/inclavare-containers](https://github.com/inclavare-containers/inclavare-containers) - A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem.
 
@@ -218,121 +364,10 @@ A rough analogy is to think of it as a secure room with unbreakable walls, where
 
 - [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK
 
-## Research Papers
+## Community & Events
 
-### 2024
+Places to discuss, ask questions, and find events related to TEEs and Blockchain.
 
-- M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, "Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel's RA-TLS Protocol", 2024 - [IEEE](https://ieeexplore.ieee.org/document/10752524/)
-- J. Zhu, H. Yin, P. Deng, and S. Zhou, "Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study", 2024 - [arXiv](https://arxiv.org/abs/2409.03992)
-- A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
-- H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
-- X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
-
-### 2023
-
-- Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
-- A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
-
-### 2022
-
-- M. Schneider, R.J. Masti, S. Shinde, S. Capkun, and R. Perez, "SoK: Hardware-supported Trusted Execution Environments", 2022 - [arXiv](https://arxiv.org/abs/2205.12742)
-- R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, "SoK: TEE-assisted Confidential Smart Contract", 2022 - [arXiv](https://arxiv.org/abs/2203.08548)
-- E. Puschner, T. Moos, S. Becker, C. Kison, A. Moradi, C. Paar, "Red Team vs. Blue Team: A Real-World Hardware Trojan Detection Case Study Across Four Modern CMOS Technology Generations", 2022 - [Cryptology ePrint Archive](https://eprint.iacr.org/2022/1720)
-- R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
-
-### 2021
-
-- C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, and X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
-- D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, “CHEX-MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two-party Oblivious Inference in the Cloud”, 2021. - [Cryptology ePrint Archive](https://eprint.iacr.org/2021/1603)
-
-### Pre-2020
-
-- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, and B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
-- A. Nilsson, P. N. Bideh, and J. Brorsson, “A Survey of Published Attacks on Intel SGX”, 2020. - [arXiv](http://arxiv.org/abs/2006.13598)
-- K. Murdock, D. Oswald, F. D. Garcia, J. Van Bulck, D. Gruss, and F. Piessens, “Plundervolt: Software-based Fault Injection Attacks against Intel SGX”, 2020. - [IEEE](https://ieeexplore.ieee.org/document/9152636)
-- R. Cheng, F. Zhang, J. Kos, W. He, N. Hynes, N. Johnson, A. Juels, and A. Miller, "Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contracts", 2019 - [IEEE](https://ieeexplore.ieee.org/document/8806762)
-- G. Kaptchuk, I. Miers, and M. Green, "Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers" , 2017 - [Cryptology ePrint Archive](https://eprint.iacr.org/2017/201)
-- J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, "Teechain: A Secure Payment Network with Asynchronous Blockchain Access", 2017. - [arXiv](https://arxiv.org/abs/1707.05454)
-
-## Articles
-
-### Introductory & Overview
-
-- [TEE Bible - Your First Stop for TEE in Crypto](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d)
-- [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
-- [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
-- [Trustless Execution Environments - David Atterman](https://omnida.substack.com/p/trustless-execution-environments?r=nvn5c&utm_campaign=post&utm_medium=web&triedRedirect=true)
-- [Chapter 3 - Verifiable Off-chain Compute: Enabling an Instagram-like experience for Web3 - Florin Digital](https://florindigital.substack.com/p/chapter-3-verifiable-off-chain-compute)
-- [Blockchain x TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
-- [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
-
-### Hardware Implementations
-
-- [We call this kernel saunters: How Apple rearranged its XNU core with exclaves - The Register](https://www.theregister.com/2025/03/08/kernel_sanders_apple_rearranges_xnu/)
-- [Intel SGX Explained](https://css.csail.mit.edu/6.858/2020/readings/costan-sgx.pdf)
-- [Demystifying SGX — Part 1 - Obscuro Labs](https://medium.com/obscuro-labs/intel-sgx-demystified-757a242682a3)
-- [A few notes on AWS Nitro Enclaves: Attack surface - Trail of Bits Blog](https://blog.trailofbits.com/2024/09/24/notes-on-aws-nitro-enclaves-attack-surface/)
-
-### Block Building and MEV
-
-- [Building Secure Ethereum Blocks on Minimal Intel TDX Confidential VMs - Flashbots Collective](https://collective.flashbots.net/t/building-secure-ethereum-blocks-on-minimal-intel-tdx-confidential-vms/3795)
-- [TDX Security For BOB Searchers, Flashbots](https://flashbots.notion.site/TDX-Security-For-BOB-Searchers-aedb060eb75b48a2a5de0e2131c9c7ef)
-- [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
-
-### Development and Security
-
-- [Securing TEE Apps: A Developer's Guide - Bedlam Research](https://www.bedlamresear.ch/posts/securing-tee-apps)
-- [Early Thoughts on Decentralized Root-of-Trust - Flashbots Collective](https://collective.flashbots.net/t/early-thoughts-on-decentralized-root-of-trust/3868)
-- [TEE-based Smart Contracts and Sealing Pitfalls](https://medium.com/initc3org/tee-based-smart-contracts-and-sealing-pitfalls-eccd5d751329)
-
-### Privacy & ZK Comparisons
-
-- [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
-- [Drawbacks In FHE Blockchain And How TEE Can Help It - Flashbots Collective](https://collective.flashbots.net/t/drawbacks-in-fhe-blockchain-and-how-tee-can-help-it/3642)
-
-### Ecosystem & Implementation Examples
-
-- [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
-- [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem)
-- [Intel SGX and Blockchain: The iExec End-to-End Trusted Execution Solution](https://medium.com/iex-ec/iexec-end-to-end-sgx-solution-fee1e63297b2)
-
-### Conference & Event Summaries
-
-- [Blockchains in Trusted Execution Environments (TEEs)](https://medium.com/@nadeem.bhati/blockchains-in-trusted-execution-environments-tees-9343b6c3f9e8)
-- [Blockchains + TEEs Day 1 Summary](https://decentralizedthoughts.github.io/2023-04-09-blockchainsplustees-day1-summary/)
-- [Blockchains + TEEs Day 2 Summary](https://decentralizedthoughts.github.io/2023-04-17-blockchainsplustees-day2-summary/)
-
-## Videos
-
-### Conference Talks
-
-- [How to Win Friends and TEE-fluence People - Ethan Buchman, Modular Summit 2024](https://youtu.be/XwKIt5XYyqw)
-- [The TEE Stack - Andrew Miller, Modular Summit 2024](https://youtu.be/9AwlMB8TF4o)
-- [Private Smart Contracts are Worth the Price of the SGX - Andrew Miller, ETHDenver 2023](https://youtu.be/L0bp6V1pn0s)
-- [Protected Order Flow for Fair Transaction-Ordering in a Profit-Seeking World - Kushal Babel, MEV-SBC 2023](https://youtu.be/v1TkocRScJg)
-- [Enabling Cross Chain Transfers Using SGX - Michael Kaplan, Avalanche Summit 2022](https://youtu.be/f2bU55ngO_c)
-- [Trusted Execution Environments Meet the Blockchain - Ittay Eyal, Simons Institute 2019](https://youtu.be/J-8RdvvpUzM)
-
-### Technical Presentations
-
-- [DEVMOS 2024: Dylan Kawalec (Osmosis), 'Building Decentralized Frontends', Modular Summit 2024](https://youtu.be/o1TY6sjMOek)
-- [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
-- [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
-- [TEE for Blockchain Applications - Ari Juels, a16z crypto 2023](https://youtu.be/Xq7oWtiwWII)
-- [SGX Panel 2023: Andrew Miller, Jonathan Passerat Palmbach, Phil Daian, Justin Drake](https://youtu.be/vokDXJmPCSI)
-
-### Workshops & Tutorials
-
-- [Phala Network: 'The Magic of TEEs' - Online Workshop on TEE Basics](https://www.youtube.com/watch?v=Rpv4ZNOcNsM)
-- [Blockchains + TEEs 2023: Day 1 - Kartik Nayan, Ittai Abraham, Aniket Kate](https://youtu.be/9-nhNQO5_Js)
-- [Blockchains + TEEs 2023: Day 2 - Kartik Nayan, Ittai Abraham, Aniket Kate](https://youtu.be/zIU3gFTb2PM)
-
-## Tweet threads
-
-- [@P3b7_, Donjon Ledger analysis of Trezor Safe 3](https://x.com/P3b7_/status/1899863743036874795)
-- [@CP2426\_, focEliza Verifiable Terminal Release](https://x.com/CP2426_/status/1871929921356067282)
-- [@\_markel\_\_\_, Extraction of Intel SGX Fuse Key0](https://x.com/_markel___/status/1828112469010596347)
-- [@PratyushRT, Breakdown of the Intel SGX (TEE) breach](https://x.com/pratyushrt/status/1828183761055330373?s=46)
-- [@buchmanster, TEE, ZK, FHE and MPC](https://x.com/buchmanster/status/1816084691784720887)
-- [@buchmanster, How you win friends and TEE-fluence people - Chapter 2](https://x.com/buchmanster/status/1816443327241490662)
-- [@DistributedMarz, Flashwares Live Session](https://x.com/DistributedMarz/status/1805640541360550110)
+- **[Blockchains + TEEs Workshop](https://blockchainplustees.github.io/)** - Academic workshop focused on the intersection of blockchains and TEEs.
+- **[Confidential Computing Consortium](https://confidentialcomputing.io/)** - Linux Foundation project advancing confidential computing.
+- **[Flashbots Collective Forum](https://collective.flashbots.net/)** - Discussions often touch on TEE usage for MEV mitigation and block building.
