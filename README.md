@@ -9,52 +9,58 @@ _Contributions are welcome!_
 
 ## Table of Contents
 
-1.  [What are TEEs?](#what-are-tees)
-2.  [Why TEEs in Blockchain?](#why-tees-in-blockchain)
-3.  [Core Concepts & Technologies](#core-concepts--technologies)
-    - [Hardware Platforms](#hardware-platforms)
-      - [Intel](#intel)
-      - [AMD](#amd)
-      - [NVIDIA](#nvidia)
-      - [ARM](#arm)
-      - [OpenTitan](#opentitan)
-    - [Cloud TEE Offerings](#cloud-tee-offerings)
-      - [Google Cloud](#google-cloud)
-      - [Microsoft Azure](#microsoft-azure)
-      - [Amazon AWS](#amazon-aws)
-    - [TEE SDKs & Frameworks](#tee-sdks--frameworks)
-4.  [Blockchain Applications & Use Cases Leveraging TEEs](#blockchain-applications--use-cases-leveraging-tees)
-    - [AI](#ai)
-    - [Block Building & MEV Mitigation](#block-building--mev-mitigation)
-    - [Bridging](#bridging)
-    - [Asset Management & Wallets](#asset-management--wallets)
-    - [General Off-Chain Compute](#general-off-chain-compute)
-    - [Privacy & Confidentiality](#privacy--confidentiality)
-    - [Rollups & Coprocessors](#rollups--coprocessors)
-5.  [Security Considerations & Attacks](#security-considerations--attacks)
-6.  [Learning Resources](#learning-resources)
-    - [Introductory & Overview Articles](#introductory--overview-articles)
-    - [Technical Deep Dive Articles](#technical-deep-dive-articles)
-    - [Research Papers](#research-papers)
-      - [2024](#2024)
-      - [2023](#2023)
-      - [2022](#2022)
-      - [2021](#2021)
-      - [Pre-2020](#pre-2020)
-    - [Videos](#videos)
-      - [Conference Talks](#conference-talks)
-      - [Technical Presentations](#technical-presentations)
-      - [Workshops and Tutorials](#workshops--tutorials)
-    - [Tweet Threads](#tweet-threads)
-7.  [Code Repositories](#code-repositories)
-    - [Awesome Lists & General Resources](#awesome-lists--general-resources)
-    - [Rust](#rust)
-    - [Go](#go)
-    - [C++](#cpp)
-    - [C](#c)
-    - [Python](#python)
-    - [TypeScript](#typescript)
-8.  [Community & Events](#community--events)
+- [What are TEEs?](#what-are-tees)
+- [Why TEEs in Blockchain?](#why-tees-in-blockchain)
+- [Core Concepts & Technologies](#core-concepts-technologies)
+  - [Hardware Platforms](#hardware-platforms)
+    - [Intel](#intel)
+    - [AMD](#amd)
+    - [NVIDIA](#nvidia)
+    - [RISC-V](#risc-v)
+    - [ARM](#arm)
+    - [OpenTitan](#opentitan)
+  - [Cloud TEE Offerings](#cloud-tee-offerings)
+    - [Google Cloud](#google-cloud)
+    - [Amazon AWS](#amazon-aws)
+    - [Microsoft Azure](#microsoft-azure)
+    - [Oracle Cloud](#oracle-cloud)
+    - [Alibaba Cloud](#alibaba-cloud)
+  - [TEE SDKs & Frameworks](#tee-sdks--frameworks)
+- [Blockchain Applications & Use Cases Leveraging TEEs](#blockchain-applications-use-cases-leveraging-tees)
+  - [AI](#ai)
+  - [Block Building & MEV Mitigation](#block-building-mev-mitigation)
+  - [Bridging](#bridging)
+  - [Asset Management & Wallets](#asset-management--wallets)
+  - [General Off-Chain Compute](#general-off-chain-compute)
+  - [Privacy & Confidentiality](#privacy--confidentiality)
+  - [Rollups & Coprocessors](#rollups--coprocessors)
+- [Security Considerations & Attacks](#security-considerations--attacks)
+- [Learning Resources](#learning-resources)
+  - [Introductory & Overview Articles](#introductory--overview-articles)
+  - [Technical Deep Dive Articles](#technical-deep-dive-articles)
+  - [Research Papers](#research-papers)
+    - [2025](#2025)
+    - [2024](#2024)
+    - [2023](#2023)
+    - [2022](#2022)
+    - [2021](#2021)
+    - [Pre‑2020](#pre2020)
+  - [Videos](#videos)
+    - [Conference Talks](#conference-talks)
+    - [Technical Presentations](#technical-presentations)
+    - [Workshops & Tutorials](#workshops--tutorials)
+  - [Tweet threads](#tweet-threads)
+  - [Podcasts](#podcasts)
+- [Code Repositories](#code-repositories)
+  - [Awesome Lists & General Resources](#awesome-lists--general-resources)
+  - [Rust](#rust)
+  - [Go](#go)
+  - [CPP](#cpp)
+  - [C](#c)
+  - [Python](#python)
+  - [TypeScript](#typescript)
+  - [WASM](#wasm)
+- [Community & Events](#community--events)
 
 ## What are TEEs?
 
@@ -103,10 +109,15 @@ The underlying silicon providing TEE capabilities.
 - [Hopper Architecture](https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/) - Accelerated computing platform for AI
 - [Blackwell Architecture](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) - Latest HW generation with accelerated computing and generative AI optimizations
 
+#### RISC-V
+
+- [Keystone](https://keystone-enclave.org) - Open Framework for architecting Trusted Execution Environments built on RISC-V
+
 #### ARM
 
 - [Confidential Compute Architecture (CCA)](https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture) - Under development. Key component of the Armv9-A architecture
 - [TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-m#:~:text=Arm%20TrustZone%20technology%20is%20used,to%20as%20the%20secure%20monitor.) - Isolates critical security firmware, assets and private information for Armv8-M based devices
+- [OP-TEE](https://www.trustedfirmware.org/projects/op-tee/) - Companion TEE for a non-secure Linux kernel running on ARM; Cortex-A cores using the TrustZone technology.
 
 #### OpenTitan
 
@@ -132,6 +143,14 @@ Major cloud providers offering virtual machines or services utilizing TEE hardwa
 #### Microsoft Azure
 
 - [Azure Confidential VM](https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-vm-overview)
+
+#### Oracle Cloud
+
+- [OCI Confidential Compute](https://docs.oracle.com/en-us/iaas/Content/Compute/References/confidential_compute.htm)
+
+#### Alibaba Cloud
+
+- [ECS Confidential Computing](https://www.alibabacloud.com/help/en/ecs/user-guide/confidential-computing-capabilities/)
 
 ### TEE SDKs & Frameworks
 
@@ -174,6 +193,7 @@ Examples of how TEEs are being used or proposed within the blockchain ecosystem.
 
 ### General Off-Chain Compute
 
+- Sui Nautilus - [Website](https://sui.io/nautilus), [MystenLabs GitHub](https://github.com/MystenLabs)
 - Marlin Protocol - [Website](https://www.marlin.org/), [marlinprotocol GitHub](https://github.com/marlinprotocol)
 - Phala Network - [Website](https://phala.network/), [Phala-Network GitHub](https://github.com/Phala-Network)
 - Automata Network - [Website](https://ata.network/), [automata-network GitHub](https://github.com/automata-network)
@@ -205,6 +225,7 @@ Articles, papers, videos, and discussions diving deeper into TEEs and their bloc
 
 ### Introductory & Overview Articles
 
+- [Proprietary binary provisioning within TEEs - fnerdman](https://collective.flashbots.net/t/proprietary-binary-provisioning-within-tees/3394)
 - [TEE Bible - Your First Stop for TEE in Crypto](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d)
 - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
 - [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
@@ -234,37 +255,43 @@ Articles, papers, videos, and discussions diving deeper into TEEs and their bloc
 
 ### Research Papers
 
+#### 2025
+
+- [Performance of Confidential Computing GPUs](https://www.arxiv.org/abs/2505.16501) – A. M. Ibarra, J. J. Stephen, A. G. Vidal, K. R. Jayaram, and A. F. Gomez, arXiv, 2025.
+- [TeeRollup: Efficient Rollup Design Using Heterogeneous TEE](https://arxiv.org/abs/2409.14647v2) – X. Wen, Q. Feng, H. Lyu, J. Niu, Y. Zhang, and C. Feng, arXiv, 2025.
+
 #### 2024
 
-- M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, "Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel's RA-TLS Protocol", 2024 - [IEEE](https://ieeexplore.ieee.org/document/10752524/)
-- J. Zhu, H. Yin, P. Deng, and S. Zhou, "Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study", 2024 - [arXiv](https://arxiv.org/abs/2409.03992)
-- A. Sunny, N, Shrivastava, S. and R. Sarangi, "SecScale: A Scalable and Secure Trusted Execution Environment for Servers", 2024 - [arXiv](https://arxiv.org/abs/2407.13572)
-- H. Eichner, D. Ramage, K. Bonawitz, D. Huba et. al., "Confidential Federated Computations", 2024 - [arXiv](https://arxiv.org/abs/2404.10764)
-- X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu "Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust", 2024 - [arXiv](https://arxiv.org/abs/2402.08908)
+- [Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel’s RA‑TLS Protocol](https://ieeexplore.ieee.org/document/10752524/) – M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, IEEE, 2024.
+- [Confidential Computing on nVIDIA H100 GPU: A Performance Benchmark Study](https://arxiv.org/abs/2409.03992) – J. Zhu, H. Yin, P. Deng, and S. Zhou, arXiv, 2024.
+- [SecScale: A Scalable and Secure Trusted Execution Environment for Servers](https://arxiv.org/abs/2407.13572) – A. Sunny, N. Shrivastava, S., and R. Sarangi, arXiv, 2024.
+- [Confidential Federated Computations](https://arxiv.org/abs/2404.10764) – H. Eichner, D. Ramage, K. Bonawitz, D. Huba, et al., arXiv, 2024.
+- [Teamwork Makes TEE Work: Open and Resilient Remote Attestation on Decentralized Trust](https://arxiv.org/abs/2402.08908) – X. Zhang, K. Qin, S. Qu, T. Wang, C. Zhang, and D. Gu, arXiv, 2024.
 
 #### 2023
 
-- Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things", 2023 - [arXiv](https://arxiv.org/abs/2310.00254)
-- A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, "Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things", 2023 - [arXiv](https://arxiv.org/abs/2304.12889)
+- [Intel TDX Demystified: A Top‑Down Approach](https://arxiv.org/abs/2303.15540) – P. Chen, W. Ozga, E. Valdez, S. Ahmed, Z. Gu, H. Jamjoom, U. Franke, and J. Bottomley, arXiv, 2023.
+- [A Distributed Efficient Blockchain Oracle Scheme for Internet of Things](https://arxiv.org/abs/2310.00254) – Y. Xian, L. Zhou, J. Jiang, B. Wang, H. Huo, and P. Liu, arXiv, 2023.
+- [Blockchain‑based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet‑of‑Things](https://arxiv.org/abs/2304.12889) – A. P. Kalapaaking, I. Khalil, M. S. Rahman, M. Atiquzzaman, X. Yi, and M. Almashor, arXiv, 2023.
 
 #### 2022
 
-- M. Schneider, R.J. Masti, S. Shinde, S. Capkun, and R. Perez, "SoK: Hardware-supported Trusted Execution Environments", 2022 - [arXiv](https://arxiv.org/abs/2205.12742)
-- R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, "SoK: TEE-assisted Confidential Smart Contract", 2022 - [arXiv](https://arxiv.org/abs/2203.08548)
-- E. Puschner, T. Moos, S. Becker, C. Kison, A. Moradi, C. Paar, "Red Team vs. Blue Team: A Real-World Hardware Trojan Detection Case Study Across Four Modern CMOS Technology Generations", 2022 - [Cryptology ePrint Archive](https://eprint.iacr.org/2022/1720)
-- R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, "Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research", 2022 - [arXiv](https://arxiv.org/abs/2203.12724)
+- [SoK: Hardware‑supported Trusted Execution Environments](https://arxiv.org/abs/2205.12742) – M. Schneider, R. J. Masti, S. Shinde, S. Capkun, and R. Perez, arXiv, 2022.
+- [SoK: TEE‑assisted Confidential Smart Contract](https://arxiv.org/abs/2203.08548) – R. Li, Q. Wang, Q. Wang, D. Galindo, and M. Ryan, arXiv, 2022.
+- [Red Team vs. Blue Team: A Real‑World Hardware Trojan Detection Case Study Across Four Modern CMOS Technology Generations](https://eprint.iacr.org/2022/1720) – E. Puschner, T. Moos, S. Becker, C. Kison, A. Moradi, and C. Paar, Cryptology ePrint Archive, 2022.
+- [Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications for Future Research](https://arxiv.org/abs/2203.12724) – R. Karanjai, L. Xu, L. Chen, F. Zhang, Z. Gao, and W. Shi, arXiv, 2022.
 
 #### 2021
 
-- C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, and X. Cheng, "Extending On-chain Trust to Off-chain -- Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)", 2021 - [arXiv](https://arxiv.org/abs/2106.15934)
-- D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, “CHEX-MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two-party Oblivious Inference in the Cloud”, 2021. - [Cryptology ePrint Archive](https://eprint.iacr.org/2021/1603)
+- [Extending On‑chain Trust to Off‑chain – Trustworthy Blockchain Data Collection using Trusted Execution Environment (TEE)](https://arxiv.org/abs/2106.15934) – C. Liu, H. Guo, M. Xu, S. Wang, D. Yu, J. Yu, and X. Cheng, arXiv, 2021.
+- [CHEX‑MIX: Combining Homomorphic Encryption with Trusted Execution Environments for Two‑party Oblivious Inference in the Cloud](https://eprint.iacr.org/2021/1603) – D. Natarajan, A. Loveless, W. Dai, and R. Dreslinski, Cryptology ePrint Archive, 2021.
 
-#### Pre-2020
+#### Pre‑2020
 
-- Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, and B. Chen, "When Blockchain Meets SGX: An Overview, Challenges, and Open Issues", 2020 - [IEEE](https://ieeexplore.ieee.org/document/9197584)
-- R. Cheng, F. Zhang, J. Kos, W. He, N. Hynes, N. Johnson, A. Juels, and A. Miller, "Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contracts", 2019 - [IEEE](https://ieeexplore.ieee.org/document/8806762)
-- G. Kaptchuk, I. Miers, and M. Green, "Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers" , 2017 - [Cryptology ePrint Archive](https://eprint.iacr.org/2017/201)
-- J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, "Teechain: A Secure Payment Network with Asynchronous Blockchain Access", 2017. - [arXiv](https://arxiv.org/abs/1707.05454)
+- [When Blockchain Meets SGX: An Overview, Challenges, and Open Issues](https://ieeexplore.ieee.org/document/9197584) – Z. Bao, Q. Wang, W. Shi, L. Wang, H. Lei, and B. Chen, IEEE, 2020.
+- [Ekiden: A Platform for Confidentiality‑Preserving, Trustworthy, and Performant Smart Contracts](https://ieeexplore.ieee.org/document/8806762) – R. Cheng, F. Zhang, J. Kos, W. He, N. Hynes, N. Johnson, A. Juels, and A. Miller, IEEE, 2019.
+- [Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers](https://eprint.iacr.org/2017/201) – G. Kaptchuk, I. Miers, and M. Green, Cryptology ePrint Archive, 2017.
+- [Teechain: A Secure Payment Network with Asynchronous Blockchain Access](https://arxiv.org/abs/1707.05454) – J. Lind, O. Naor, I. Eyal, F. Kelbert, P. Pietzuch, and E. Gun Sirer, arXiv, 2017.
 
 ### Videos
 
@@ -301,6 +328,10 @@ Articles, papers, videos, and discussions diving deeper into TEEs and their bloc
 - [@buchmanster, How you win friends and TEE-fluence people - Chapter 2](https://x.com/buchmanster/status/1816443327241490662)
 - [@DistributedMarz, Flashwares Live Session](https://x.com/DistributedMarz/status/1805640541360550110)
 
+### Podcasts
+
+- [AI Confidential](https://podcast.aiconfidential.com) - Podcast and newsletter
+
 ## Code Repositories
 
 Software related to TEEs in the context of blockchain, libraries, and example implementations.
@@ -314,11 +345,14 @@ Software related to TEEs in the context of blockchain, libraries, and example im
 
 ### Rust
 
+- [MystenLabs/nautilus](https://github.com/MystenLabs/nautilus) - Nautilus: Verifiable offchain computation on Sui
 - [Dstack-TEE/dstack](https://github.com/Dstack-TEE/dstack) - Dstack is a developer friendly and security first SDK to simplify the deployment of arbitrary Docker-based apps into TEE.
 - [marlinprotocol/oyster-serverless](https://github.com/marlinprotocol/oyster-serverless) - Oyster Serverless is a cutting-edge, high-performance serverless computing platform designed to securely execute JavaScript (JS) and WebAssembly (WASM) code in a highly controlled environment.
 - [Phala-Network/phala-blockchain](https://github.com/Phala-Network/phala-blockchain) - The Phala Network Blockchain, pRuntime and the bridge.
 - [kata-containers/kata-containers](https://github.com/kata-containers/kata-containers) - Kata Containers is an open source project and community working to build a standard implementation of lightweight Virtual Machines (VMs) that feel and perform like containers, but provide the workload isolation and security advantages of VMs.
 - [taikoxyz/raiko](https://github.com/taikoxyz/raiko) - Multi-proofs for Taiko. SNARKS, STARKS and Trusted Execution Enclave.
+- [enarx/drawbridge](https://github.com/enarx/drawbridge) - A Confidential Computing-Aware Workload Repository
+- [enarx/steward](https://github.com/enarx/steward) - A Confidential Computing-Aware Certificate Authority
 - [confidential-containers/guest-components](https://github.com/confidential-containers/guest-components) - Confidential Containers Guest Tools and Components
 - [kinvolk/azure-cvm-tooling](https://github.com/kinvolk/azure-cvm-tooling) - Libraries and tools for Confidential Computing on Azure
 - [HyperEnclave/hyperenclave](https://github.com/HyperEnclave/hyperenclave) - An Open and Cross-platform Trusted Execution Environment.
@@ -363,6 +397,10 @@ Software related to TEEs in the context of blockchain, libraries, and example im
 ### TypeScript
 
 - [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK
+
+### WASM
+
+- [enarx/enarx](https://github.com/enarx/enarx) - Enarx: Confidential Computing with WebAssembly
 
 ## Community & Events
 
