@@ -162,6 +162,7 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - Aizel Network - [Website](https://aizelnetwork.com), [AizelNetwork GitHub](https://github.com/AizelNetwork)
   - ELIZA in TEE - [TEE plugin for ELIZA (using dstack from Phala)](https://elizaos.github.io/eliza/docs/advanced/eliza-in-tee/)
 - **Block Building & MEV Mitigation**
+  - Jito BAM - [Website](https://bam.dev)
   - Unichain - [Website](https://www.unichain.org), [Whitepaper](https://docs.unichain.org/whitepaper.pdf)
   - [Block Building inside SGX](https://writings.flashbots.net/block-building-inside-sgx)
   - [Running Geth within SGX: Our Experience, Learnings and Code](https://writings.flashbots.net/geth-inside-sgx)
