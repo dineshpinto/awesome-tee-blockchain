@@ -173,6 +173,8 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - Self Protocol - [Website](https://self.xyz), [selfxyz GitHub](https://github.com/selfxyz)
 - **Bridging**
   - Avalanche Bridge - [Website](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1), [ava-labs GitHub](https://github.com/ava-labs)
+- **Oracles**
+  - Quex - [Website](https://quex.tech), [quex-tech GitHub](https://github.com/quex-tech)
 - **Asset Management & Wallets**
   - Turnkey - [Website](https://www.turnkey.com), [tkhq GitHub](https://github.com/tkhq)
   - Lit Protocol - [Website](https://www.litprotocol.com), [LIT-Protocol GitHub](https://github.com/LIT-Protocol)
