@@ -169,6 +169,8 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - [Running Geth within SGX: Our Experience, Learnings and Code](https://writings.flashbots.net/geth-inside-sgx)
   - [SGX-Based Backrunning and Covert Channels](https://writings.flashbots.net/backrunning-private-txs-MPC#sgx-based-backrunning-and-covert-channels)
   - [MEV-SGX - A sealed bid MEV auction design](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
+- **Identity**
+  - Self Protocol - [Website](https://self.xyz), [selfxyz GitHub](https://github.com/selfxyz)
 - **Bridging**
   - Avalanche Bridge - [Website](https://medium.com/avalancheavax/avalanche-bridge-secure-cross-chain-asset-transfers-using-intel-sgx-b04f5a4c7ad1), [ava-labs GitHub](https://github.com/ava-labs)
 - **Asset Management & Wallets**
