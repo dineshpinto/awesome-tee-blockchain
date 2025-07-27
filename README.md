@@ -1,5 +1,7 @@
 # Awesome TEE Blockchain [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+[![Check Links](https://github.com/dineshpinto/awesome-tee-blockchain/actions/workflows/links.yml/badge.svg)](https://github.com/dineshpinto/awesome-tee-blockchain/actions/workflows/links.yml)
+
 A curated list of resources for learning about Trusted Execution Environments (TEEs) and their applications in the blockchain space.
 
 _Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)._
@@ -16,6 +18,7 @@ _Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)._
   - [CPP](#cpp)
   - [C](#c)
   - [Others](#others)
+- [Major TEE Attacks](#major-tee-attacks)
 - [Social Media & Community](#social-media--community)
 - [Additional Resources](#additional-resources)
 
@@ -28,7 +31,6 @@ _Articles, talks and presentations to help you get started with TEEs._
   - [What is a Trusted Execution Environment (TEE)? - Halborn](https://www.halborn.com/blog/post/what-is-a-trusted-execution-environment-tee)
   - [Trustless Execution Environments - David Atterman](https://omnida.substack.com/p/trustless-execution-environments?r=nvn5c&utm_campaign=post&utm_medium=web&triedRedirect=true)
   - [Why trusted execution environments will be integral to proof-of-stake blockchains](https://venturebeat.com/datadecisionmakers/why-trusted-execution-environments-will-be-integral-to-proof-of-stake-blockchains/)
-  - [Blockchain Privacy and Security in Data Computation](https://www.zkon.xyz/blog/blockchain-privacy-mpc-zk-tee-explained)
   - [Blockchain x TEE: Why Various Forefront Projects are Adopting TEE - TOKI](https://medium.com/@tokifinance/blockchain-projects-adapting-tee-bed9550db9c5)
   - [4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs](https://oasisprotocol.org/blog/comparing-zkp-tee-privacy)
   - [Blockchains in Trusted Execution Environments (TEEs)](https://medium.com/@nadeem.bhati/blockchains-in-trusted-execution-environments-tees-9343b6c3f9e8)
@@ -39,7 +41,7 @@ _Articles, talks and presentations to help you get started with TEEs._
   - [Protected Order Flow for Fair Transaction-Ordering in a Profit-Seeking World - Kushal Babel, MEV-SBC 2023](https://youtu.be/v1TkocRScJg)
   - [Enabling Cross Chain Transfers Using SGX - Michael Kaplan, Avalanche Summit 2022](https://youtu.be/f2bU55ngO_c)
   - [Trusted Execution Environments Meet the Blockchain - Ittay Eyal, Simons Institute 2019](https://youtu.be/J-8RdvvpUzM)
-- **Technical Presentations**
+- **Presentations**
   - [DEVMOS 2024: Dylan Kawalec (Osmosis), 'Building Decentralized Frontends', Modular Summit 2024](https://youtu.be/o1TY6sjMOek)
   - [What apps are unlocked by the TEE stack - Xinyuan Sun, Modular Summit 2024](https://x.com/modular_summit/status/1814653436090327161)
   - [Parallelized Confidential Computing - Yannik Schrade, Fil Dev Summit 2024](https://youtu.be/k0Uxl71Lj_g)
@@ -55,20 +57,23 @@ _Articles, talks and presentations to help you get started with TEEs._
 ### Articles
 
 - **Advanced**
+  - [Block Building inside SGX - Flashbots Writings](https://writings.flashbots.net/block-building-inside-sgx)
+  - [Running Geth within SGX: Our Experience, Learnings and Code - Flashbots Writings](https://writings.flashbots.net/geth-inside-sgx)
+  - [SGX-Based Backrunning and Covert Channels - Flashbots Writings](https://writings.flashbots.net/backrunning-private-txs-MPC#sgx-based-backrunning-and-covert-channels)
+  - [MEV-SGX - A sealed bid MEV auction design - Eth Research](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
   - [Proprietary binary provisioning within TEEs - fnerdman](https://collective.flashbots.net/t/proprietary-binary-provisioning-within-tees/3394)
   - [We call this kernel saunters: How Apple rearranged its XNU core with exclaves - The Register](https://www.theregister.com/2025/03/08/kernel_sanders_apple_rearranges_xnu/)
   - [Building Secure Ethereum Blocks on Minimal Intel TDX Confidential VMs - Flashbots Collective](https://collective.flashbots.net/t/building-secure-ethereum-blocks-on-minimal-intel-tdx-confidential-vms/3795)
   - [TDX Security For BOB Searchers, Flashbots](https://flashbots.notion.site/TDX-Security-For-BOB-Searchers-aedb060eb75b48a2a5de0e2131c9c7ef)
-  - [Sirrah: Speedrunning a TEE Coprocessor](https://writings.flashbots.net/suave-tee-coprocessor)
-  - [Nix + Bazel: Fully reproducible, incremental builds](https://www.tweag.io/blog/2018-03-15-bazel-nix/)
+  - [Sirrah: Speedrunning a TEE Coprocessor - Flashbots Writings](https://writings.flashbots.net/suave-tee-coprocessor)
+  - [Nix + Bazel: Fully reproducible, incremental builds - Tweag](https://www.tweag.io/blog/2018-03-15-bazel-nix/)
   - [Early Thoughts on Decentralized Root-of-Trust - Flashbots Collective](https://collective.flashbots.net/t/early-thoughts-on-decentralized-root-of-trust/3868)
   - [Drawbacks In FHE Blockchain And How TEE Can Help It - Flashbots Collective](https://collective.flashbots.net/t/drawbacks-in-fhe-blockchain-and-how-tee-can-help-it/3642)
-  - [How Secret Network Uses SGX](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
-  - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem)
-  - [Intel SGX and Blockchain: The iExec End-to-End Trusted Execution Solution](https://medium.com/iex-ec/iexec-end-to-end-sgx-solution-fee1e63297b2)
-  - [Blockchains + TEEs Day 1 Summary](https://decentralizedthoughts.github.io/2023-04-09-blockchainsplustees-day1-summary/)
-  - [Blockchains + TEEs Day 2 Summary](https://decentralizedthoughts.github.io/2023-04-17-blockchainsplustees-day2-summary/)
-  - [Intel SGX Explained](https://css.csail.mit.edu/6.858/2020/readings/costan-sgx.pdf)
+  - [How Secret Network Uses SGX - Secret Network](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx/overview)
+  - [Intel SGX and Blockchain: The iExec End-to-End Trusted Execution Solution - iExec](https://medium.com/iex-ec/iexec-end-to-end-sgx-solution-fee1e63297b2)
+  - [Blockchains + TEEs Day 1 Summary - Decentralized Thoughts](https://decentralizedthoughts.github.io/2023-04-09-blockchainsplustees-day1-summary/)
+  - [Blockchains + TEEs Day 2 Summary - Decentralized Thoughts](https://decentralizedthoughts.github.io/2023-04-17-blockchainsplustees-day2-summary/)
+  - [Intel SGX Explained - V. Costan and S. Devada (MIT)](https://css.csail.mit.edu/6.858/2020/readings/costan-sgx.pdf)
   - [Demystifying SGX — Part 1 - Obscuro Labs](https://medium.com/obscuro-labs/intel-sgx-demystified-757a242682a3)
 - **Security**
   - [A Survey of Published Attacks on Intel SGX - Nilsson et al. (2020)](https://arxiv.org/abs/2006.13598)
@@ -165,10 +170,6 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
 - **Block Building & MEV Mitigation**
   - Jito BAM - [Website](https://bam.dev)
   - Unichain - [Website](https://www.unichain.org), [Whitepaper](https://docs.unichain.org/whitepaper.pdf)
-  - [Block Building inside SGX](https://writings.flashbots.net/block-building-inside-sgx)
-  - [Running Geth within SGX: Our Experience, Learnings and Code](https://writings.flashbots.net/geth-inside-sgx)
-  - [SGX-Based Backrunning and Covert Channels](https://writings.flashbots.net/backrunning-private-txs-MPC#sgx-based-backrunning-and-covert-channels)
-  - [MEV-SGX - A sealed bid MEV auction design](https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677)
 - **Identity**
   - Self Protocol - [Website](https://self.xyz), [selfxyz GitHub](https://github.com/selfxyz)
 - **Bridging**
@@ -186,14 +187,13 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - Marlin Protocol - [Website](https://www.marlin.org/), [marlinprotocol GitHub](https://github.com/marlinprotocol)
   - Phala Network - [Website](https://phala.network/), [Phala-Network GitHub](https://github.com/Phala-Network)
   - Automata Network - [Website](https://ata.network/), [automata-network GitHub](https://github.com/automata-network)
-  - Clique Network - [Website](https://www.clique.tech), [automata-network GitHub](https://github.com/automata-network)
+  - Clique Network - [Website](https://www.clique.tech)
 - **Privacy & Confidentiality**
   - Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
   - Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
   - Enclave Markets - [Website](https://www.enclave.market)
 - **Rollups & Coprocessors**
   - Taiko - [Website](https://taiko.xyz/), [taikoxyz GitHub](https://github.com/taikoxyz)
-  - Unichain - [Website](https://www.unichain.org)
 
 ## Code Repositories
 
@@ -261,6 +261,27 @@ _Software related to TEEs in the context of blockchain, libraries, and example i
 - **TypeScript**
   - [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK.
 
+## Major TEE Attacks
+
+_Documented attacks or attack vectors on TEEs. List is WIP._
+
+> **Classes:** **TE** – transient/speculative; **MDS** – microarchitectural data sampling; **FI** – fault injection; **AL** – architectural leakage; **PR** – protocol/design.
+
+| Year | Name                                       | Class             | Affected TEEs                           | CVE(s)                                                                                                                                                                                                                                                                     | Summary                                                                       | Key Mitigations                                                                         |
+| ---- | ------------------------------------------ | ----------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 2018 | **Foreshadow / L1TF**                      | TE                | Intel SGX, VMs, OS kernels              | [CVE‑2018‑3615](https://nvd.nist.gov/vuln/detail/CVE-2018-3615), [CVE‑2018‑3620](https://nvd.nist.gov/vuln/detail/CVE-2018-3620), [CVE‑2018‑3646](https://nvd.nist.gov/vuln/detail/CVE-2018-3646)                                                                          | Read enclave/VM/kernel secrets via L1D leaks                                  | Microcode updates, L1D flush on enclave transitions, OS patches, SGX TCB recovery       |
+| 2018 | **SEVered**                                | PR / VM isolation | AMD SEV (pre‑SNP)                       | [1812.01129](https://arxiv.org/abs/1812.01129)                                                                                                                                                                                                                             | Malicious hypervisor remaps guest pages to exfiltrate plaintext               | Move to SEV‑SNP (integrity protection), stronger guest validation                       |
+| 2019 | **MDS family (RIDL, Fallout, ZombieLoad)** | MDS / TE          | Intel SGX, VMs                          | [CVE‑2018‑12126](https://nvd.nist.gov/vuln/detail/CVE-2018-12126), [CVE‑2018‑12127](https://nvd.nist.gov/vuln/detail/CVE-2018-12127), [CVE‑2018‑12130](https://nvd.nist.gov/vuln/detail/CVE-2018-12130), [CVE‑2019‑11091](https://nvd.nist.gov/vuln/detail/CVE-2019-11091) | Leakage from CPU buffers into enclaves/VMs                                    | Microcode buffer clearing, stronger serialization, sometimes disable HT                 |
+| 2019 | **Plundervolt**                            | FI                | Intel SGX                               | [CVE‑2019‑11157](https://nvd.nist.gov/vuln/detail/CVE-2019-11157)                                                                                                                                                                                                          | Software‑controlled undervolting corrupts enclave computation & leaks secrets | Lock MSR undervolt interface (uCode), disable voltage control, protocol‑level FI checks |
+| 2019 | **TSX Asynchronous Abort (TAA)**           | TE / MDS          | Intel SGX, VMs                          | [CVE‑2019‑11135](https://nvd.nist.gov/vuln/detail/CVE-2019-11135)                                                                                                                                                                                                          | Additional transient leaks tied to TSX                                        | Microcode, disable TSX, serialize on transitions                                        |
+| 2019 | **SGX-Step**                               | SC / Tooling      | Intel SGX                               | [1611.06952](https://arxiv.org/abs/1611.06952)                                                                                                                                                                                                                             | Fine‑grained interrupting boosts side‑channel resolution                      | Rate‑limit interrupts, constant‑time/data‑oblivious coding                              |
+| 2020 | **Load Value Injection (LVI)**             | TE                | Intel SGX                               | [CVE‑2020‑0551](https://nvd.nist.gov/vuln/detail/CVE-2020-0551)                                                                                                                                                                                                            | Inject values into victim’s transient path                                    | Compiler‑inserted LFENCEs/serialization; Intel LVI toolchain                            |
+| 2020 | **CacheOut**                               | MDS / TE          | Intel SGX                               | [CVE‑2020‑0549](https://nvd.nist.gov/vuln/detail/CVE-2020-0549)                                                                                                                                                                                                            | Extract data from L1D despite prior mitigations                               | Stronger L1D flush/serialization; enclave transition hardening                          |
+| 2020 | **CrossTalk**                              | MDS               | Intel SGX                               | [CVE‑2020‑0543](https://nvd.nist.gov/vuln/detail/CVE-2020-0543)                                                                                                                                                                                                            | Cross‑core leakage via shared buffers                                         | Microcode fixes; synchronization/isolation                                              |
+| 2022 | **ÆPIC Leak**                              | AL                | Intel SGX                               | [CVE‑2022‑21233](https://nvd.nist.gov/vuln/detail/CVE-2022-21233)                                                                                                                                                                                                          | Architectural leak of stale data via APIC MMIO (no speculation)               | Microcode/firmware updates, sanitize APIC reads, kernel patches                         |
+| 2023 | **Downfall / Gather Data Sampling (GDS)**  | TE                | Intel SGX, VMs                          | [CVE‑2022‑40982](https://nvd.nist.gov/vuln/detail/CVE-2022-40982)                                                                                                                                                                                                          | GATHER instruction leaks vector register data                                 | Microcode; serialization barriers; toolchain guidance                                   |
+| 2023 | **Inception / Phantom Speculation** (AMD)  | TE                | AMD SEV/SNP (indirectly affects CC VMs) | [CVE‑2023‑20569](https://nvd.nist.gov/vuln/detail/CVE-2023-20569)                                                                                                                                                                                                          | Speculation attack on Zen CPUs                                                | Microcode/firmware updates; speculation barriers                                        |
+
 ## Social Media & Community
 
 _TEEs on social media._
@@ -279,7 +300,6 @@ _TEEs on social media._
   - [Flashbots Collective Forum](https://collective.flashbots.net/) - Discussions often touch on TEE usage for MEV mitigation and block building.
   - [Confidential Containers Community](https://github.com/confidential-containers/confidential-containers) - Open-source project enabling cloud-native confidential computing by shielding containerized workloads.
   - [Confidential Computing Consortium](https://confidentialcomputing.io/) - Linux Foundation project advancing confidential computing.
-  - [Blockchains + TEEs Workshop](https://blockchainplustees.github.io/) - Academic workshop focused on the intersection of blockchains and TEEs.
 
 ## Additional Resources
 
@@ -287,4 +307,4 @@ _TEEs on social media._
 - [bpradipt/awesome-confidential-computing](https://github.com/bpradipt/awesome-confidential-computing) - Collection of resources on Confidential Computing.
 - [erayack/awesome-sgx-blockchain](https://github.com/erayack/awesome-sgx-blockchain) - Awesome SGX and TEE on Blockchain Resources.
 - [orbstack/orbstack](https://github.com/orbstack/orbstack) - Fast, light, simple Docker containers & Linux machines.
-- [TEE Bible](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d) - Your First Stop for TEE in Crypto
+- [TEE Bible](https://www.tee3.ai/TEE-Bible-Your-First-Stop-for-TEE-in-Crypto-15eacce4724b80d1a13ae894d3927c1d) - Your First Stop for TEE in Crypto.
