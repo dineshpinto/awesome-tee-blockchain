@@ -261,6 +261,8 @@ _Software related to TEEs in the context of blockchain, libraries, and example i
   - [ethernity-cloud/mvp-pox-node](https://github.com/ethernity-cloud/mvp-pox-node) - Ethernity Cloud Node.
 - **TypeScript**
   - [tkhq/sdk](https://github.com/tkhq/sdk) - Turnkey TypeScript SDK.
+- **Nix**
+  - [aws/uefi](https://github.com/aws/uefi) - EDK2 changes for reproducible UEFI binaries on Nitro.
 
 ## Major TEE Attacks
 
