@@ -87,6 +87,7 @@ _Articles, talks and presentations to help you get started with TEEs._
 _Key research works covering different aspects of TEEs._
 
 - **2025**
+  - [WireTap: Breaking Server SGX via DRAM Bus Interposition](https://wiretap.fail/files/wiretap.pdf) - A. Seto, O. Duran, S. Amer, J. Chuang, S. Schaik, D. Genkin, and C. Garmin, In Proceedings of the ACM SIGSAC Conference on Computer and Communications Security (CCS ’25), 2025.
   - [SoK: A cloudy view on trust relationships of CVMs -- How Confidential Virtual Machines are falling short in Public Cloud](https://arxiv.org/abs/2503.08256) - J. Eisoldt, A. Galanou, A. Ruzhanskiy, N. Küchenmeister, Y. Baburkin, T. Dai, I. Gudymenko, S. Köpsell, and R. Kapitza, arXiv, 2025.
   - [NVIDIA GPU Confidential Computing Demystified](https://arxiv.org/abs/2507.02770) - Z. Gu, E. Valdez, S. Ahmed, J. J. Stephen, M. Le, H. Jamjoom, S. Zhao, and Zhiqiang Lin, arXiv, 2025.
   - [Performance of Confidential Computing GPUs](https://www.arxiv.org/abs/2505.16501) - A. M. Ibarra, J. J. Stephen, A. G. Vidal, K. R. Jayaram, and A. F. Gomez, arXiv, 2025.
