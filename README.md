@@ -171,6 +171,7 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - ELIZA in TEE - [TEE plugin for ELIZA (using dstack from Phala)](https://elizaos.github.io/eliza/docs/advanced/eliza-in-tee/)
 - **Block Building & MEV Mitigation**
   - Jito BAM - [Website](https://bam.dev)
+  - Privana Finance - [Website](https://privana.finance), [Docs](https://docs.privana.finance)
   - Unichain - [Website](https://www.unichain.org), [Whitepaper](https://docs.unichain.org/whitepaper.pdf)
 - **Identity**
   - Self Protocol - [Website](https://self.xyz), [selfxyz GitHub](https://github.com/selfxyz)
