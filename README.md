@@ -190,6 +190,7 @@ _Examples of how TEEs are being used or proposed within the blockchain ecosystem
   - Phala Network - [Website](https://phala.network/), [Phala-Network GitHub](https://github.com/Phala-Network)
   - Automata Network - [Website](https://ata.network/), [automata-network GitHub](https://github.com/automata-network)
   - Clique Network - [Website](https://www.clique.tech)
+  - Acurast - [Website](https://acurast.com), [Acurast GitHub](https://github.com/Acurast)
 - **Privacy & Confidentiality**
   - Oasis Protocol - [Website](https://oasisprotocol.org), [oasisprotocol GitHub](https://github.com/oasisprotocol)
   - Secret Network - [Website](https://scrt.network), [scrtlabs GitHub](https://github.com/scrtlabs)
