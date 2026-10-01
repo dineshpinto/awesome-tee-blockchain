@@ -91,6 +91,7 @@ _Key research works covering different aspects of TEEs._
   - [SoK: A cloudy view on trust relationships of CVMs -- How Confidential Virtual Machines are falling short in Public Cloud](https://arxiv.org/abs/2503.08256) - J. Eisoldt, A. Galanou, A. Ruzhanskiy, N. Küchenmeister, Y. Baburkin, T. Dai, I. Gudymenko, S. Köpsell, and R. Kapitza, arXiv, 2025.
   - [NVIDIA GPU Confidential Computing Demystified](https://arxiv.org/abs/2507.02770) - Z. Gu, E. Valdez, S. Ahmed, J. J. Stephen, M. Le, H. Jamjoom, S. Zhao, and Zhiqiang Lin, arXiv, 2025.
   - [Performance of Confidential Computing GPUs](https://www.arxiv.org/abs/2505.16501) - A. M. Ibarra, J. J. Stephen, A. G. Vidal, K. R. Jayaram, and A. F. Gomez, arXiv, 2025.
+  - [Acurast: Decentralized Serverless Cloud](https://arxiv.org/abs/2503.15654) - C. Killer, A. De Carli, P. Brun, A. V. Charlé, M. Godenzi, and S. Wehrli, arXiv, 2025.
 - **2024**
   - [Towards Validation of TLS 1.3 Formal Model and Vulnerabilities in Intel's RA‑TLS Protocol](https://ieeexplore.ieee.org/document/10752524/) - M. U. Sardar, A. Niemi, H. Tschofenig, and T. Fossati, IEEE, 2024.
   - [TeeRollup: Efficient Rollup Design Using Heterogeneous TEE](https://arxiv.org/abs/2409.14647v2) - X. Wen, Q. Feng, H. Lyu, J. Niu, Y. Zhang, and C. Feng, arXiv, 2025.
